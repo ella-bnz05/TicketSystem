@@ -23,6 +23,7 @@
   <!-- endinject -->
   <!-- Layout styles -->
   <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- End layout styles -->
   <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
 </head>
@@ -328,18 +329,17 @@
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="navbar-profile">
-                  <img class="img-xs rounded-circle" src="C:\xampp\htdocs\TS\TicketSystem\img" alt="">
+                  <img class="img-xs rounded-circle" src="img/profile-pic.jpg" alt="Profile Picture">
                   <p class="mb-0 d-none d-sm-block navbar-profile-name">Aalihya M. Rivero</p>
                   <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
               </a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="profileDropdown">
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                 <h6 class="p-3 mb-0">Profile</h6>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
+                <a class="dropdown-item preview-item" href="#">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
                       <i class="mdi mdi-settings text-success"></i>
@@ -350,7 +350,7 @@
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
+                <a class="dropdown-item preview-item" href="#">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-dark rounded-circle">
                       <i class="mdi mdi-logout text-danger"></i>
@@ -365,12 +365,22 @@
               </div>
             </li>
           </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-            data-toggle="offcanvas">
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
             <span class="mdi mdi-format-line-spacing"></span>
           </button>
         </div>
       </nav>
+    
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <!-- Optional: Include custom scripts -->
+      <script>
+        // Add custom JavaScript here if needed
+      </script>
+    </body>
+    </html>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
@@ -382,7 +392,7 @@
                   <div class="row">
                     <div class="col-9">
                       <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">icon</h3>
+                        <i class="fa-solid fa-user"></i>
                       </div>
                     </div>
                     <div class="col-3">
@@ -391,8 +401,8 @@
                       </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Overall System User Count</h6>
-                </div>
+                  <h6 class="text-muted font-weight-normal">Overall System </h6>
+                  <p>User Count</p></div>
               </div>
             </div>
             <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
@@ -402,7 +412,6 @@
                     <div class="col-9">
                       <div class="d-flex align-items-center align-self-start">
                         <i class="fa-solid fa-users">
-
                         </i>
                       </div>
                     </div>
@@ -412,7 +421,8 @@
                       </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Overall CITRMU Personel</h6>
+                  <h6 class="text-muted font-weight-normal">Overall </h6>
+                <p> CITRMU Personel</p>
                 </div>
               </div>
             </div>
@@ -422,16 +432,18 @@
                   <div class="row">
                     <div class="col-9">
                       <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">icon</h3>
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
                       </div>
                     </div>
                     <div class="col-3">
                       <div class="icon icon-box-danger">
-                        <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                        <span class="mdi mdi-arrow-top-right icon-item"></span>
                       </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Services Offered</h6>
+                  <h6 class="text-muted font-weight-normal">Services</h6>
+                  <p> Offered</p>
+
                 </div>
               </div>
             </div>
@@ -441,7 +453,7 @@
                   <div class="row">
                     <div class="col-9">
                       <div class="d-flex align-items-center align-self-start">
-                        <h3 class="mb-0">icon</h3>
+                        <i class="fa-solid fa-ticket"></i>
                       </div>
                     </div>
                     <div class="col-3">
@@ -450,7 +462,9 @@
                       </div>
                     </div>
                   </div>
-                  <h6 class="text-muted font-weight-normal">Overall Tickets Completed</h6>
+                  <h6 class="text-muted font-weight-normal">Overall </h6>
+                  <p> Tickets Completed</p>
+
                 </div>
               </div>
             </div>
@@ -913,12 +927,9 @@
         <!-- content-wrapper ends -->
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com
-              2020</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a
-                href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin
-                templates</a> from Bootstrapdash.com</span>
+          <div class="d-sm-flex justify-content-center ">
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a
+                <a> City Information Technology and Records Management Unit</a>
           </div>
         </footer>
         <!-- partial -->
