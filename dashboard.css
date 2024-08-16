@@ -15206,7 +15206,6 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
   pointer-events: none;
   cursor: default;
 }
@@ -26049,13 +26048,7 @@ div.tagsinput {
   border-radius: 4px;
 }
 
-.nav-tabs.nav-tabs-vertical-custom .nav-link {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: #00314e;
-  font-weight: 700;
-  padding: 1.75rem;
-}
+
 
 .nav-tabs.nav-tabs-vertical-custom .nav-link.active {
   color: #ffffff;
@@ -30148,91 +30141,10 @@ div.tagsinput span.tag a {
 }
 
 .sidebar .nav .nav-item .nav-link .menu-title {
-  color: #000;
   display: inline-block;
   font-size: 0.9375rem;
   line-height: 1;
   vertical-align: middle;
-}
-
-.sidebar .nav .nav-item .nav-link .badge {
-  margin-right: auto;
-  margin-left: 1rem;
-}
-
-.sidebar .nav .nav-item.active>.nav-link {
-  background: #0f1015;
-  position: relative;
-}
-
-.sidebar .nav .nav-item.active>.nav-link:before {
-  content: "";
-  width: 3px;
-  height: 100%;
-  background: #0090e7;
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.sidebar .nav .nav-item.active>.nav-link .menu-title {
-  color: #ffffff;
-}
-
-.sidebar .nav .nav-item.active>.nav-link i {
-  color: #ffffff;
-}
-
-.sidebar .nav .nav-item.nav-profile .nav-link {
-  height: auto;
-  line-height: 1;
-  border-top: 0;
-  padding: 1.25rem 0;
-}
-
-.sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image {
-  width: 44px;
-  height: 44px;
-}
-
-.sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-image img {
-  width: 44px;
-  height: 44px;
-  border-radius: 100%;
-}
-
-.sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-text {
-  margin-left: 1rem;
-}
-
-.rtl .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-text {
-  margin-left: auto;
-  margin-right: 1rem;
-}
-
-.sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-badge {
-  font-size: 1.125rem;
-  margin-left: auto;
-}
-
-.rtl .sidebar .nav .nav-item.nav-profile .nav-link .nav-profile-badge {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.sidebar .nav .nav-item.sidebar-actions {
-  margin-top: 1rem;
-}
-
-.sidebar .nav .nav-item.sidebar-actions .nav-link {
-  border-top: 0;
-  display: block;
-  height: auto;
-}
-
-.sidebar .nav .nav-item.sidebar-actions:hover {
-  background: initial;
 }
 
 .sidebar .nav .nav-item.sidebar-actions:hover .nav-link {
