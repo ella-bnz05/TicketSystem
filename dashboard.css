@@ -25832,9 +25832,12 @@ div.tagsinput {
 .icon.icon-box-success {
   width: 40px;
   height: 37px;
-  background: #191c20;
   border-radius: 7px;
   color: #ffffff;
+  position: absolute; /* Position the icon box absolutely within its container */
+  bottom: 1%; /* Align to the bottom */
+  right: 3%; /* Align to the right */
+  margin: 10px; 
 }
 
 .icon .icon-item {

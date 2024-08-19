@@ -76,22 +76,11 @@ include 'controllers/UsersController.php';
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-              <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
-              </span>
-              <span class="menu-title">Ticket management</span>
-              <i class="menu-arrow"></i>
-            </a>
-
-            <span class="menu-icon">
-          </li>
-          <li class="nav-item menu-items">
             <a class="nav-link" href="pages/forms/basic_elements.html">
               <span class="menu-icon">
-                <i class="mdi mdi-playlist-play"></i>
+              <i class="mdi mdi-laptop"></i>
               </span>
-              <span class="menu-title">Reporting and analytics</span>
+              <span class="menu-title">Ticket management</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -99,7 +88,7 @@ include 'controllers/UsersController.php';
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
-              <span class="menu-title">Integrations</span>
+              <span class="menu-title">Services</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -107,7 +96,7 @@ include 'controllers/UsersController.php';
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
               </span>
-              <span class="menu-title">People</span>
+              <span class="menu-title">Performance Tracker</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -115,31 +104,13 @@ include 'controllers/UsersController.php';
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
-              <span class="menu-title">Archive</span>
+              <span class="menu-title">People</span>
             </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-              <span class="menu-icon">
-                <i class="mdi mdi-security"></i>
-              </span>
-              <span class="menu-title">Inventory</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="auth">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-              </ul>
-            </div>
           </li>
           <li class="nav-item menu-items">
             <a class="nav-link" href="user_management.php">
               <span class="menu-icon">
-                <i class="mdi mdi-file-document-box"></i>
+              <i class="mdi mdi-security"></i>
               </span>
               <span class="menu-title">Users Management</span>
             </a>
@@ -367,7 +338,7 @@ include 'controllers/UsersController.php';
             <div class="row">
               <div class="col-9">
                 <div class="d-flex align-items-center align-self-start">
-                  <i class="fa-solid fa-user"></i>
+                  <i class="fa-solid fa-user fa-2x"></i>
                 </div>
               </div>
               <div class="col-3">
@@ -376,8 +347,10 @@ include 'controllers/UsersController.php';
                 </div>
               </div>
             </div>
-            <h6 class="text-muted font-weight-normal">Overall System </h6>
-            <p>User Count</p>
+            <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall System <br> User Count</h6>
+            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+            <h6 class="font-weight-bold mb-0">000</h6>
+            </div>
           </div>
         </div>
       </div>
@@ -387,7 +360,7 @@ include 'controllers/UsersController.php';
             <div class="row">
               <div class="col-9">
                 <div class="d-flex align-items-center align-self-start">
-                  <i class="fa-solid fa-users">
+                  <i class="fa-solid fa-users fa-2x">
                   </i>
                 </div>
               </div>
@@ -397,8 +370,10 @@ include 'controllers/UsersController.php';
                 </div>
               </div>
             </div>
-            <h6 class="text-muted font-weight-normal">Overall </h6>
-            <p> CITRMU Personel</p>
+            <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall <br>CITRMU Personel</h6>
+            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
+            <h6 class="font-weight-bold mb-0">000</h6>
+            </div>
           </div>
         </div>
       </div>
