@@ -3,7 +3,7 @@
 const DB_HOST = 'localhost';
 const DB_USERNAME = 'root';
 const DB_PASSWORD = '';
-const DB_DATABASE = 'ticketingsystem';
+const DB_DATABASE = 'ticket_system_server';
 
 class ConfigClass
 {

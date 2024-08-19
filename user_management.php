@@ -1,16 +1,16 @@
-<!--<?php
+<?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../../../frontend/auth/index.php');
+    header('dashboard.html');
     exit();
 }
 
-include '../../../backend/config/config.php';
-include '../../../backend/controllers/user/UsersController.php';
-include '../../../backend/controllers/tickets/ticketsController.php';
-include '../../../backend/controllers/dashboard/dashboardController.php';
+include 'config.php';
+include 'UsersController.php';
+include 'ticketsController.php';
+include 'dashboardController.php';
 ?>
--->
+
 <!doctype html>
 <html lang="en">
 
@@ -37,11 +37,11 @@ include '../../../backend/controllers/dashboard/dashboardController.php';
     <link rel="stylesheet" href="../../../frontend\assets\css/main.min.css" />
     <script src="../../../frontend\assets\js/theme.js"></script>
 
-    <!-- Common CSS   <link rel="stylesheet" href="../../../frontend\assets\css\user_management.css" />
- -->
+    <!-- Common CSS -->
     <link rel="stylesheet" href="../../../frontend\assets\css\main.min.css" />
-    <link rel="stylesheet" href="../../../frontend\assets\fonts/icomoon/icomoon.css" /> 
-  
+    <link rel="stylesheet" href="../../../frontend\assets\fonts/icomoon/icomoon.css" />
+    <link rel="stylesheet" href="../../../frontend\assets\css/main.min.css" />
+
     <!-- Chartist css -->
     <link href="../../../frontend\assets\vendor/chartist/css/chartist.min.css" rel="stylesheet" />
     <link href="../../../frontend\assets\vendor/chartist/css/chartist-custom.css" rel="stylesheet" />
@@ -49,7 +49,7 @@ include '../../../backend/controllers/dashboard/dashboardController.php';
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-</head>s
+</head>
 
 <body class="login-bg">
 
@@ -111,7 +111,7 @@ include '../../../backend/controllers/dashboard/dashboardController.php';
                 <!-- END: .main-heading -->
                 <!-- BEGIN .main-content -->
                 <div class="main-content">
-<!--
+
                     <?php
 
                     // Check if the `alert` key is defined in the `$_GET` variable.
@@ -148,7 +148,7 @@ include '../../../backend/controllers/dashboard/dashboardController.php';
                         }
                     }
 
-                    ?>-->
+                    ?>
 
                     <!-- <div class="row gutters">
                         <div class="col-lg-3 col-sm-6">
@@ -294,11 +294,11 @@ include '../../../backend/controllers/dashboard/dashboardController.php';
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="user/addUsers-script.php" method="post"
+                                    <form action="../../../backend/scripts/user/addUsers-script.php" method="post"
                                         enctype="multipart/form-data" class="p-3" style="width: 100%;">
                                         <div class="d-flex flex-wrap">
                                             <div class="col-md-12 d-flex flex-column gap-5">
-                                            <!----       <div class="d-flex gap-2">
+                                                <div class="d-flex gap-2">
                                                     <div class="form-group w-100 mx-auto">
                                                      <label for="profile_picture" class="py-2 text-muted">PROFILE
                                                             PICTURE:<span class="text-danger">*</span></label>

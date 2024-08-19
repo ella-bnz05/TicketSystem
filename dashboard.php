@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+	header('Location: ../../../frontend/auth/index.php');
+	exit();
+}
+
+include '../../../backend/config/config.php';
+include '../../../backend/controllers/user/UsersController.php';
+include '../../../backend/controllers/tickets/ticketsController.php';
+include '../../../backend/controllers/dashboard/dashboardController.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,13 +83,7 @@
               <span class="menu-title">Ticket management</span>
               <i class="menu-arrow"></i>
             </a>
-            <div cla <div class="collapse" id="ui-basic">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-              </ul>
-            </div>
+
             <span class="menu-icon">
           </li>
           <li class="nav-item menu-items">
@@ -130,7 +137,7 @@
             </div>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="user_management.html">
+            <a class="nav-link" href="user_management.php">
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
