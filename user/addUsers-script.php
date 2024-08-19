@@ -1,7 +1,7 @@
 <?php
 
-include '../../../backend/config/config.php';
-include '../../../backend/controllers/user/usersController.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
 
 // Retrieve and sanitize form data
 $unique_id = UsersControllerClass::generateNumericID(16);
@@ -11,7 +11,7 @@ $password = ConfigClass::sanitizeInput($_POST['password']);
 $department = ConfigClass::sanitizeInput($_POST['department']);
 $is_deleted = 0;
 // Create a unique folder for the member's pictures
-$userProfilePictureFolder = '../../../frontend/private/user-images/' . $unique_id;
+$userProfilePictureFolder = '../../user-images/' . $unique_id;
 if (!file_exists($userProfilePictureFolder)) {
     mkdir($userProfilePictureFolder, 0777, true);
 }
@@ -49,5 +49,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/user/index.php?alert=new_member');
+header('Location: user_management.php?alert=new_member');
 exit(); // Ensure script execution stops

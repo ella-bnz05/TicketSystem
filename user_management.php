@@ -1,14 +1,14 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-    header('dashboard.html');
-    exit();
-}
+//if (!isset($_SESSION['user_id'])) {
+//   header('dashboard.html');
+//  exit();
+//}
 
-include 'config.php';
-include 'UsersController.php';
-include 'ticketsController.php';
-include 'dashboardController.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
+//include 'ticketsController.php';
+//include 'dashboardController.php';
 ?>
 
 <!doctype html>
@@ -20,8 +20,8 @@ include 'dashboardController.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="../../../frontend/assets/img/CITRMU_Logo.png" />
-    <title>Helpdesk Support System - CITRMU</title>
+    <link rel="shortcut icon" href="img/CITRMU_Logo.png" />
+    <title>Ticketing System - CITRMU</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -34,12 +34,12 @@ include 'dashboardController.php';
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- Mian and Login css -->
-    <link rel="stylesheet" href="../../../frontend\assets\css/main.min.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
     <script src="../../../frontend\assets\js/theme.js"></script>
 
     <!-- Common CSS -->
     <link rel="stylesheet" href="../../../frontend\assets\css\main.min.css" />
-    <link rel="stylesheet" href="../../../frontend\assets\fonts/icomoon/icomoon.css" />
+    <link rel="stylesheet" href="assets\fonts/icomoon/icomoon.css" />
     <link rel="stylesheet" href="../../../frontend\assets\css/main.min.css" />
 
     <!-- Chartist css -->
@@ -69,14 +69,14 @@ include 'dashboardController.php';
     <div class="app-wrap">
         <!-- BEGIN .app-heading -->
         <?php
-        include '../../includes/header.php';
+        //include '../../includes/header.php';
         ?>
         <!-- END: .app-heading -->
         <!-- BEGIN .app-container -->
         <div class="app-container">
             <!-- BEGIN .app-side -->
             <?php
-            include '../../includes/sidebar.php';
+            //include '../../includes/sidebar.php';
             ?>
             <!-- END: .app-side -->
 
@@ -149,7 +149,7 @@ include 'dashboardController.php';
                     }
 
                     ?>
-
+<!-- nakatanggal na -->
                     <!-- <div class="row gutters">
                         <div class="col-lg-3 col-sm-6">
                             <div class="card">
@@ -264,7 +264,7 @@ include 'dashboardController.php';
                                     <table class="table table-striped table-hover">
                                         <thead>
                                             <tr class="text-center">
-                                            <!----    <th scope="col">PROFILE PICTURE</th>--->
+                                                <th scope="col">PROFILE PICTURE</th>
                                                 <th scope="col">ID</th>
                                                 <th scope="col">USERNAME</th>
                                                 <th scope="col">ROLE</th>
@@ -294,19 +294,19 @@ include 'dashboardController.php';
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="../../../backend/scripts/user/addUsers-script.php" method="post"
+                                    <form action="user/addUsers-script.php" method="post"
                                         enctype="multipart/form-data" class="p-3" style="width: 100%;">
                                         <div class="d-flex flex-wrap">
                                             <div class="col-md-12 d-flex flex-column gap-5">
                                                 <div class="d-flex gap-2">
                                                     <div class="form-group w-100 mx-auto">
-                                                     <label for="profile_picture" class="py-2 text-muted">PROFILE
+                                                        <label for="profile_picture" class="py-2 text-muted">PROFILE
                                                             PICTURE:<span class="text-danger">*</span></label>
                                                         <input type="file" class="form-control h-75 w-100 pt-4 ps-4"
                                                             id="profile_picture" name="profile_picture"
                                                             accept="image/jpeg, image/png, image/webp" required />
                                                     </div>
-                                                </div>--->
+                                                </div>
                                                 <div class="d-flex gap-2">
                                                     <div class="form-group w-100">
                                                         <label for="department" class="py-2 text-muted">DEPARTMENT:<span

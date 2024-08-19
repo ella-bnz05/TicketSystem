@@ -1,14 +1,14 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-	header('Location: ../../../frontend/auth/index.php');
-	exit();
-}
+//if (!isset($_SESSION['user_id'])) {
+	//header('Location: ../../../frontend/auth/index.php');
+//	exit();
+//}
 
-include '../../../backend/config/config.php';
-include '../../../backend/controllers/user/UsersController.php';
-include '../../../backend/controllers/tickets/ticketsController.php';
-include '../../../backend/controllers/dashboard/dashboardController.php';
+include 'db/config.php';
+include 'controllers/UsersController.php';
+//include '../../../backend/controllers/tickets/ticketsController.php';
+//include '../../../backend/controllers/dashboard/dashboardController.php';
 ?>
 
 <!DOCTYPE html>

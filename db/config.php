@@ -3,7 +3,7 @@
 const DB_HOST = 'localhost';
 const DB_USERNAME = 'root';
 const DB_PASSWORD = '';
-const DB_DATABASE = 'ticket_system_server';
+const DB_DATABASE = 'ticketingsystem';
 
 class ConfigClass
 {
@@ -85,11 +85,11 @@ class ConfigClass
         return $input;
     }
 
-    public static function baseURL(): string
-    {
+//  public static function baseURL(): string
+   // {
         // return 'http://localhost/JKPS-web-development/ON%20DEVELOPMENT/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // LAPTOP
         // return 'http://localhost/.OFFICE_PROJECTS/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // PC
-        return 'http://172.16.200.246:4000/'; // SERVER
-    }
+   //     return 'http://172.16.200.246:4000/'; // SERVER
+  //  }
 
 }

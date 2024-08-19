@@ -25,7 +25,7 @@ class UsersControllerClass
 
             $html .= '<tr class="text-center">';
             $html .= '<td class="py-3 text-muted">
-            <img class="avatar h-auto" style="width: 5rem;" src="../../../frontend/private/user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
+            <img class="avatar h-auto" style="width: 5rem;" src="user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
             $html .= '<td class="py-3 text-muted">' . $row['unique_id'] . '</td>';
             $html .= '<td class="py-3 text-primary">' . $row['username'] . '</td>';
             $html .= '<td class="py-3 text-' . $textColor . '">' . $row['role'] . '</td>';
@@ -34,7 +34,7 @@ class UsersControllerClass
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/user/deleteUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined h-auto">delete</span>DELETE</a>';
+            $html .= '<a href="user/deleteUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined h-auto">delete</span>DELETE</a>';
             $html .= '</td>';
             $html .= '</tr>';
         }
@@ -53,7 +53,7 @@ class UsersControllerClass
         foreach ($result as $row) {
             $html .= '<tr class="text-center">';
             $html .= '<td class="py-3 text-muted">
-            <img class="avatar h-auto" style="width: 5rem;" src="../../../frontend/private/user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
+           <img class="avatar h-auto" style="width: 5rem;" src="user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
             $html .= '<td class="py-3 text-muted">' . $row['unique_id'] . '</td>';
             $html .= '<td class="py-3 text-primary">' . $row['username'] . '</td>';
             $html .= '<td class="py-3 text-secondary">' . $row['role'] . '</td>';
@@ -62,7 +62,7 @@ class UsersControllerClass
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/user/restoreUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">
+            $html .= '<a href="user/restoreUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">
 replay
 </span>RESTORE</a>';
             $html .= '</td>';
@@ -100,7 +100,7 @@ replay
         foreach ($result as $row) {
             $html .= '<tr class="text-center">';
             $html .= '<td class="py-3 text-muted">
-            <img class="avatar h-auto" style="width: 5rem;" src="../../../frontend/private/user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
+            <img class="avatar h-auto" style="width: 5rem;" src="user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
             $html .= '<td class="py-3 text-muted">' . $row['unique_id'] . '</td>';
             $html .= '<td class="py-3 text-primary">' . $row['username'] . '</td>';
             $html .= '<td class="py-3 text-secondary">' . $row['role'] . '</td>';
@@ -108,12 +108,11 @@ replay
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/user/deleteUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined h-auto">delete</span>DELETE</a>';
+            $html .= '<a href="user/deleteUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined h-auto">delete</span>DELETE</a>';
             $html .= '</td>';
             $html .= '</tr>';
         }
 
         return $html;
     }
-
 }
