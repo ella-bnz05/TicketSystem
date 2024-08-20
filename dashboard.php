@@ -78,7 +78,7 @@ include 'controllers/UsersController.php';
           </a>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/forms/basic_elements.html">
+          <a class="nav-link" href="testing.php">
             <span class="menu-icon">
               <i class="mdi mdi-laptop"></i>
             </span>
@@ -94,20 +94,13 @@ include 'controllers/UsersController.php';
           </a>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/charts/chartjs.html">
+          <a class="nav-link" href="performance.php">
             <span class="menu-icon">
               <i class="mdi mdi-chart-bar"></i>
             </span>
             <span class="menu-title">Performance Tracker</span>
           </a>
         </li>
-        <li class="nav-item menu-items">
-          <a class="nav-link" href="pages/icons/mdi.html">
-            <span class="menu-icon">
-              <i class="mdi mdi-contacts"></i>
-            </span>
-            <span class="menu-title">People</span>
-          </a>
         </li>
         <li class="nav-item menu-items">
           <a class="nav-link" href="user_management.php">
@@ -134,7 +127,7 @@ include 'controllers/UsersController.php';
           </button>
           <ul class="navbar-nav w-100">
           </ul>
-          
+
           <ul class="navbar-nav navbar-nav-left">
             <li class="nav-item dropdown border-right">
               <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown"
@@ -179,7 +172,7 @@ include 'controllers/UsersController.php';
                 <p class="p-3 mb-0 text-center">See all projects</p>
               </div>
             </li>
-           <!-- <li class="nav-item nav-settings d-none d-lg-block">
+            <!-- <li class="nav-item nav-settings d-none d-lg-block">
               <a class="nav-link" href="#">
                 <i class="mdi mdi-view-grid"></i>
               </a>

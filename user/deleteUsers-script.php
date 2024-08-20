@@ -13,5 +13,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: C:\xampp\htdocs\TS\user_management.php?alert=member_deleted');
+header('Location: /TS/testing.php?alert=member_deleted');
 exit(); // Ensure script execution stops

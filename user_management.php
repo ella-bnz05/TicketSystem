@@ -273,8 +273,8 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                                                 <th scope="col">ACTIONS</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="p-5">
-                                            <?php echo UsersControllerClass::getUsers(); ?>
+                                        <tbody class="p-5" style="color: black;">
+                                        <?php echo UsersControllerClass::getUsers(); ?>
                                         </tbody>
                                     </table>
                                 </div>

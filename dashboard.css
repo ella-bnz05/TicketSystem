@@ -9726,7 +9726,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: black;
 }
 
@@ -12378,9 +12378,9 @@ fieldset:disabled .wizard>.actions a,
 }
 
 .btn-secondary {
-  color: #212529;
-  background-color: #e4eaec;
-  border-color: #e4eaec;
+  background-color: #ef2f1a;
+  border-color: #ef2f1a;
+  color: #fff;
 }
 
 .btn-secondary:hover {
@@ -15725,11 +15725,10 @@ input[type="button"].btn-block {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: 5;
   word-wrap: break-word;
   background: linear-gradient(90deg, #18a54a, #21cf5f);
   box-shadow: 0px 0px 5px #179978;
-
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -15764,8 +15763,9 @@ input[type="button"].btn-block {
 
 .card-body {
   flex: 1 1 auto;
-  min-height: 1px;
+  min-height: 10px;
   padding: 1.25rem;
+  color: var(--bs-card-color);
 }
 
 .card-title {
@@ -17190,6 +17190,7 @@ a.close.disabled {
   position: relative;
   flex: 1 1 auto;
   padding: 0.9375rem;
+  color:ffffff;
 }
 
 .modal-footer {
@@ -19535,6 +19536,7 @@ button.bg-dark:focus {
 
 .p-3 {
   padding: 1rem !important;
+  color:#ffffff;
 }
 
 .pt-3,
@@ -19582,7 +19584,7 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 5rem !important;
 }
 
 .pt-5,
@@ -21643,7 +21645,7 @@ a.text-primary:focus,
 
 .text-secondary,
 .list-wrapper .remove {
-  color: #e4eaec !important;
+  color: #000 !important;
 }
 
 a.text-secondary:hover,
@@ -21713,7 +21715,7 @@ a.text-dark:focus {
 
 .text-muted,
 .preview-list .preview-item .preview-item-content p .content-category {
-  color: #ffffff !important;
+  color: #000 !important;
 }
 
 .text-black-50 {
@@ -25946,7 +25948,7 @@ div.tagsinput {
   border-top: 0;
   border-bottom-width: 1px;
   font-weight: 500;
-  color: white;
+  color: #000;
 }
 
 .table thead th i,
@@ -30659,6 +30661,7 @@ div.tagsinput span.tag a {
   padding-right: 0;
   transition: all 0.25s ease;
   width: calc(100% - 244px);
+  color:#ffffff;
 }
 
 .page-body-wrapper.full-page-wrapper {
@@ -30703,7 +30706,17 @@ div.tagsinput span.tag a {
   -webkit-flex-grow: 1;
   flex-grow: 1;
 }
-
+.mdi:before, .mdi-set {
+  display: inline-block;
+  font: normal normal normal 24px / 1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .mdi-laptop::before {
+    content: "\F0322";
+}
 
 
 
