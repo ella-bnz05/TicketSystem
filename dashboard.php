@@ -1,7 +1,7 @@
 <?php
 session_start();
 //if (!isset($_SESSION['user_id'])) {
-	//header('Location: ../../../frontend/auth/index.php');
+//header('Location: ../../../frontend/auth/index.php');
 //	exit();
 //}
 
@@ -43,79 +43,81 @@ include 'controllers/UsersController.php';
   <div class="container-scroller">
     <!-- partial:partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
-      <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
-        aria-expanded="false">
-        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html">
-            <h1 class="fs-8" style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> CITRMU</h1>
-          </a>
-        </div>
-        <ul class="nav">
-          <li class="nav-item profile">
-            <div class="profile-desc">
-              <div class="profile-pic">
-                <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-                  <span class="count bg-success"></span>
-                </div>
-                <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Aalihya M. Rivero</h5>
-                  <span>Kpop Member</span>
-                </div>
+      <!--<a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false"> -->
+      <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+        <a class="sidebar-brand brand-logo" href="dashboard.php">
+          <h1 class="fs-8" style=" font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> CITRMU</h1>
+        </a>
+        <a class="sidebar-brand brand-logo-mini" href="dashboard.php"><img src="img/CITRMU_Logo.png"
+            alt="logo" />
+      </div>
+      <ul class="nav">
+        <li class="nav-item profile">
+          <div class="profile-desc">
+            <div class="profile-pic">
+              <div class="count-indicator">
+                <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                <span class="count bg-success"></span>
               </div>
-          </li>
-          <li class="nav-item nav-category">
-            <span class="nav-link">Navigation</span>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="#">
-              <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
-              </span>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <span class="menu-icon">
+              <div class="profile-name">
+                <h5 class="mb-0 font-weight-normal">Aalihya M. Rivero</h5>
+                <span>Kpop Member</span>
+              </div>
+            </div>
+        </li>
+        <li class="nav-item nav-category">
+          <span class="nav-link">Navigation</span>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="#">
+            <span class="menu-icon">
+              <i class="mdi mdi-speedometer"></i>
+            </span>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="pages/forms/basic_elements.html">
+            <span class="menu-icon">
               <i class="mdi mdi-laptop"></i>
-              </span>
-              <span class="menu-title">Ticket management</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-table-large"></i>
-              </span>
-              <span class="menu-title">Services</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-chart-bar"></i>
-              </span>
-              <span class="menu-title">Performance Tracker</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi.html">
-              <span class="menu-icon">
-                <i class="mdi mdi-contacts"></i>
-              </span>
-              <span class="menu-title">People</span>
-            </a>
-          </li>
-          <li class="nav-item menu-items">
-            <a class="nav-link" href="user_management.php">
-              <span class="menu-icon">
+            </span>
+            <span class="menu-title">Ticket management</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="pages/tables/basic-table.html">
+            <span class="menu-icon">
+              <i class="mdi mdi-table-large"></i>
+            </span>
+            <span class="menu-title">Services</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="pages/charts/chartjs.html">
+            <span class="menu-icon">
+              <i class="mdi mdi-chart-bar"></i>
+            </span>
+            <span class="menu-title">Performance Tracker</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="pages/icons/mdi.html">
+            <span class="menu-icon">
+              <i class="mdi mdi-contacts"></i>
+            </span>
+            <span class="menu-title">People</span>
+          </a>
+        </li>
+        <li class="nav-item menu-items">
+          <a class="nav-link" href="user_management.php">
+            <span class="menu-icon">
               <i class="mdi mdi-security"></i>
-              </span>
-              <span class="menu-title">Users Management</span>
-            </a>
-          </li>
-        </ul>
+            </span>
+            <span class="menu-title">Users Management</span>
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <!-- partial -->
@@ -123,15 +125,18 @@ include 'controllers/UsersController.php';
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="img/CITRMU_Logo.png"
               alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-menu"></span>
           </button>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item dropdown d-none d-lg-block">
+          <ul class="navbar-nav w-100">
+          </ul>
+          
+          <ul class="navbar-nav navbar-nav-left">
+            <li class="nav-item dropdown border-right">
               <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown"
                 aria-expanded="false" href="#">+ Create New Ticket</a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
@@ -174,55 +179,13 @@ include 'controllers/UsersController.php';
                 <p class="p-3 mb-0 text-center">See all projects</p>
               </div>
             </li>
-            <li class="nav-item nav-settings d-none d-lg-block">
+           <!-- <li class="nav-item nav-settings d-none d-lg-block">
               <a class="nav-link" href="#">
                 <i class="mdi mdi-view-grid"></i>
               </a>
-            </li>
-            <li class="nav-item dropdown border-left">
-              <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown"
-                aria-expanded="false">
-                <i class="mdi mdi-email"></i>
-                <span class="count bg-success"></span>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                aria-labelledby="messageDropdown">
-                <h6 class="p-3 mb-0">Messages</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
-                    <p class="text-muted mb-0"> 1 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
-                    <p class="text-muted mb-0"> 15 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
-                    <p class="text-muted mb-0"> 18 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <p class="p-3 mb-0 text-center">4 new messages</p>
-              </div>
-            </li>
-            <li class="nav-item dropdown border-left">
+            </li>-->
+
+            <!-- <li class="nav-item dropdown border-left">
               <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#"
                 data-toggle="dropdown">
                 <i class="mdi mdi-bell"></i>
@@ -270,13 +233,13 @@ include 'controllers/UsersController.php';
                 <div class="dropdown-divider"></div>
                 <p class="p-3 mb-0 text-center">See all notifications</p>
               </div>
-            </li>
+            </li> -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <div class="navbar-profile">
                   <img class="img-xs rounded-circle" src="img/profile-pic.jpg" alt="Profile Picture">
-                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Aalihya M. Rivero</p>
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Sheesh M. Rivero</p>
                   <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
               </a>
@@ -349,7 +312,7 @@ include 'controllers/UsersController.php';
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall System <br> User Count</h6>
             <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-            <h6 class="font-weight-bold mb-0">000</h6>
+              <h6 class="font-weight-bold mb-0">000</h6>
             </div>
           </div>
         </div>
@@ -372,12 +335,12 @@ include 'controllers/UsersController.php';
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall <br>CITRMU Personel</h6>
             <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-            <h6 class="font-weight-bold mb-0">000</h6>
+              <h6 class="font-weight-bold mb-0">000</h6>
             </div>
           </div>
         </div>
       </div>
-     <!--<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
+      <!--<div class="col-xl-3 col-sm-6 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
             <div class="row">
@@ -417,7 +380,7 @@ include 'controllers/UsersController.php';
 
           </div>
         </div>
-      </div>--> 
+      </div>-->
     </div>
     <div class="row">
       <div class="col-md-4 grid-margin stretch-card">

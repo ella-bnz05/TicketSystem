@@ -38,7 +38,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
     <script src="../../../frontend\assets\js/theme.js"></script>
 
     <!-- Common CSS -->
-    <link rel="stylesheet" href="../../../frontend\assets\css\main.min.css" />
+    <link rel="stylesheet" href="css\main.min.css" />
     <link rel="stylesheet" href="assets\fonts/icomoon/icomoon.css" />
     <link rel="stylesheet" href="../../../frontend\assets\css/main.min.css" />
 
