@@ -1,7 +1,7 @@
 <?php
 
-include '../../../backend/config/config.php';
-include '../../../backend/controllers/user/usersController.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
 
 // Get the user id from the URL or POST data
 $user_id = $_GET['id'] ?? $_POST['id'];
@@ -14,5 +14,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/user/index.php?alert=member_restored');
+header('Location: /TS/testing.php?alert=member_restored');
 exit(); // Ensure script execution stops

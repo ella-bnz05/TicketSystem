@@ -49,5 +49,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: user_management.php?alert=new_member');
+header('Location: /TS/user_management.php?alert=new_member');
 exit(); // Ensure script execution stops
