@@ -1,7 +1,7 @@
 <?php
 
 include 'C:\xampp\htdocs\TS\db\config.php';
-include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
+include 'C:\xampp\htdocs\TS\controllers\UsersController.php';
 
 // Retrieve and sanitize form data
 $unique_id = UsersControllerClass::generateNumericID(16);
@@ -49,5 +49,6 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: /TS/user_management.php?alert=new_member');
+
+header('Location: /../../TS/user_management.php?alert=new_member');
 exit(); // Ensure script execution stops

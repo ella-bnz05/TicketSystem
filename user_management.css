@@ -29814,6 +29814,7 @@ div.tagsinput span.tag a {
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-toggle:after {
   color: #0090e7;
   font-size: 1rem;
+  display: none;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item.dropdown .dropdown-menu {
@@ -30717,6 +30718,7 @@ div.tagsinput span.tag a {
   -moz-osx-font-smoothing: grayscale;
   .mdi-laptop::before {
     content: "\F0322";
+}
 }
 
 

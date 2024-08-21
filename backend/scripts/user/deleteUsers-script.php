@@ -1,6 +1,7 @@
 <?php
 
 include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\backend\controllers\UsersController.php';
 
 // Get the user id from the URL or POST data
 $user_id = $_GET['id'] ?? $_POST['id'];
@@ -13,5 +14,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: /TS/user_management.php?alert=member_deleted');
+header('Location: /../../TS/user_management.php?alert=member_deleted');
 exit(); // Ensure script execution stops
