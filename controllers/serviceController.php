@@ -22,7 +22,7 @@ class ServiceControllerClass
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/service/deleteServices-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined">delete</span>DELETE</a>';
+            $html .= '<a href="../../TS/backend/scripts/service/deleteServices-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined">delete</span>DELETE</a>';
             $html .= '</td>';
             $html .= '</tr>';
         }
@@ -49,7 +49,7 @@ class ServiceControllerClass
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/service/restoreServices-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
+            $html .= '<a href="../../TS/backend/scripts/service/restoreServices-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
             $html .= '</td>';
             $html .= '</tr>';
         }

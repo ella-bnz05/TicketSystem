@@ -1,6 +1,6 @@
 <?php
 
-include '../../../backend/config/config.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
 
 
 $id = $_GET['id'] ?? $_POST['id'];
@@ -13,5 +13,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/service/index.php?alert=service_deleted');
+header('Location: /TS/services.php?alert=service_deleted');
 exit(); // Ensure script execution stops

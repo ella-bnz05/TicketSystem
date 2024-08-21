@@ -1,8 +1,8 @@
 <?php
 
-include '../../../backend/config/config.php';
-include '../../../backend/controllers/tickets/ticketsController.php';
-include '../../../backend/controllers/service/serviceController.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers\ticketsController.php';
+include 'C:\xampp\htdocs\TS\controllers\serviceController.php';
 
 // Retrieve and sanitize form data
 $ticket_unique_id = ServiceControllerClass::generateNumericID(16);
@@ -53,5 +53,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/tickets/index.php?alert=new_ticket');
+header('Location: /TS/testing.php?alert=new_ticket');
 exit(); // Ensure script execution stops

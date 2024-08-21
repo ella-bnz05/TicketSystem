@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once '../../../backend/config/config.php';
-include_once '../../../backend/controllers/tickets/ticketsController.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers\ticketsController.php';
 
 // Retrieve and sanitize form data
 $unique_id = ConfigClass::sanitizeInput($_POST['unique_id']);
@@ -63,5 +63,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/tickets/index.php?alert=ticket_completed');
+header('Location: /TS/testing.php?alert=ticket_completed');
 exit();

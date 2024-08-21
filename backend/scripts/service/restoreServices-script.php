@@ -1,6 +1,6 @@
 <?php
 
-include '../../../backend/config/config.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
 
 // Get the user id from the URL or POST data
 $id = $_GET['id'] ?? $_POST['id'];
@@ -13,5 +13,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: ../../../frontend/views/service/index.php?alert=service_restored');
+header('Location: /TS/services.php?alert=service_restored');
 exit(); // Ensure script execution stops
