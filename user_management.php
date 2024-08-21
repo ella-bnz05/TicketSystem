@@ -150,7 +150,7 @@ include 'controllers/UsersController.php';
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form action="user/addUsers-script.php" method="post"
+                                <form action="backend/scripts/user/addUsers-script.php" method="post"
                                     enctype="multipart/form-data" class="p-3" style="width: 100%;">
                                     <div class="d-flex flex-wrap">
                                         <div class="col-md-12 d-flex flex-column gap-5">
