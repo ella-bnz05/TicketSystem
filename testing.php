@@ -87,7 +87,7 @@ include 'controllers/UsersController.php';
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="testing.php">
+                    <a class="nav-link" href="user_management.php">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
@@ -112,7 +112,7 @@ include 'controllers/UsersController.php';
                 </li>
 
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="user_management.php">
+                    <a class="nav-link" href="testing.php">
                         <span class="menu-icon">
                             <i class="mdi mdi-security"></i>
                         </span>
@@ -182,51 +182,50 @@ include 'controllers/UsersController.php';
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                                <div class="navbar-profile">
-                                    <img class="img-xs rounded-circle" src="img/profile-pic.jpg" alt="Profile Picture">
-                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Sheesh M. Rivero</p>
-                                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
-                                aria-labelledby="profileDropdown">
-                                <h6 class="p-3 mb-0">Profile</h6>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item" href="#">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-settings text-success"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <p class="preview-subject mb-1">Settings</p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item preview-item" href="#">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
-                                            <i class="mdi mdi-logout text-danger"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <p class="preview-subject mb-1">Log out</p>
-                                    </div>
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <p class="p-3 mb-0 text-center">Advanced settings</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-                        data-toggle="offcanvas">
-                        <span class="mdi mdi-format-line-spacing"></span>
-                    </button>
+              <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="navbar-profile">
+                  <img class="img-xs rounded-circle" src="img/profile-pic.jpg" alt="Profile Picture">
+                  <p class="mb-0 d-none d-sm-block navbar-profile-name">Sheesh M. Rivero</p>
+                  <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                 </div>
-            </nav>
-
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                aria-labelledby="profileDropdown">
+                <h6 class="p-3 mb-0">Profile</h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="#">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Settings</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item" href="#">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-logout text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject mb-1">Log out</p>
+                  </div>
+                </a>
+                <div class="dropdown-divider"></div>
+                <p class="p-3 mb-0 text-center">Advanced settings</p>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
             <!-- jQuery -->
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <!-- Bootstrap JS -->
@@ -360,7 +359,7 @@ include 'controllers/UsersController.php';
                                                         placeholder="Username" name="username" required>
                                                 </div>
                                                 <div class="form-group w-100">
-                                                    <label for="password" class="py-2 text-muted">INITIAL
+                                                    <label for="password" class="py-2 text-muted" >INITIAL
                                                         PASSWORD:<span class="text-danger">*</span></label>
                                                     <input type="text" class="form-control h-75 w-100" id="password"
                                                         placeholder="Password" name="password" required>
@@ -418,16 +417,20 @@ include 'controllers/UsersController.php';
                 <!-- END MODAL ARCHIVE-->
             </div>
         </div>
-    </div>
 </div>
-<!--/div>
-</div-->
 <footer class="footer">
-    <div class="d-sm-flex justify-content-center ">
+        <div class="d-sm-flex justify-content-center ">
         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a <a> City Information Technology and
                 Records Management Unit</a>
-</footer>
+        </footer>
+        </div>
+    </div>
+    </html>
+<!--/div>
+</div-->
+
 </div>
+
 
 
 
@@ -436,6 +439,7 @@ include 'controllers/UsersController.php';
 <script src="assets/js/misc.js"></script>
 <!--
 <-->
+
 </body>
 
-</html>
+</htm>

@@ -10344,6 +10344,7 @@ pre code {
   .col-sm-12 {
     flex: 0 0 100%;
     max-width: 100%;
+    padding:10px;
   }
 
   .order-sm-first {
@@ -11520,7 +11521,7 @@ pre code {
 .tt-query:-moz-focusring,
 .tt-hint:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 #495057;
+  text-shadow: 0 0 0 #e3ebf4;
 }
 
 .form-control:focus,
@@ -11534,9 +11535,9 @@ pre code {
 .typeahead:focus,
 .tt-query:focus,
 .tt-hint:focus {
-  color: #495057;
-  background-color: #fff;
-  border-color: #80bdff;
+  color: #f5ebeb;
+  background-color: #000;
+  border-color: #04080b;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
@@ -11764,7 +11765,7 @@ textarea.tt-hint {
 
 .form-check-input[disabled]~.form-check-label,
 .form-check-input:disabled~.form-check-label {
-  color: #6c7293;
+  color: #0e0f17;
 }
 
 .form-check-label {
@@ -17141,7 +17142,7 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #000000;
+  background-color: #ffffff;
   background-clip: padding-box;
   border: 1px solid #2c2e33;
   border-radius: 0.3rem;
@@ -17171,7 +17172,7 @@ a.close.disabled {
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 1rem;
-  border-bottom: 1px solid #2c2e33;
+  border-bottom: 1px solid #000;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
 }
@@ -17190,7 +17191,7 @@ a.close.disabled {
   position: relative;
   flex: 1 1 auto;
   padding: 0.9375rem;
-  color:ffffff;
+  color:#ffffff;
 }
 
 .modal-footer {
@@ -19584,7 +19585,7 @@ button.bg-dark:focus {
 }
 
 .p-5 {
-  padding: 5rem !important;
+  padding: 1rem !important;
 }
 
 .pt-5,
@@ -24463,7 +24464,7 @@ code {
   font-weight: normal;
   font-size: 0.875rem;
   padding: 0.625rem 0.6875rem;
-  background-color: #2A3038;
+  background-color: #000;
   border-radius: 2px;
   color: #ffffff;
 }

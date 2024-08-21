@@ -78,7 +78,7 @@ include 'controllers/UsersController.php';
           </a>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="testing.php">
+          <a class="nav-link" href="user_management.php">
             <span class="menu-icon">
               <i class="mdi mdi-laptop"></i>
             </span>
@@ -103,7 +103,7 @@ include 'controllers/UsersController.php';
         </li>
         </li>
         <li class="nav-item menu-items">
-          <a class="nav-link" href="user_management.php">
+          <a class="nav-link" href="testing.php">
             <span class="menu-icon">
               <i class="mdi mdi-security"></i>
             </span>
@@ -832,12 +832,16 @@ include 'controllers/UsersController.php';
   </div>
   <!-- content-wrapper ends -->
   <!-- partial:partials/_footer.html -->
-  <footer class="footer">
+  </div>
+</div>
+</div>
+<footer class="footer">
     <div class="d-sm-flex justify-content-center ">
       <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> <a <a> City Information Technology and
-          Records Management Unit</a>
-    </div>
+          Records Management Unit</a> 
   </footer>
+</div>
+
   <!-- partial -->
 </div>
 <!-- main-panel ends -->

@@ -21716,6 +21716,7 @@ a.text-dark:focus {
 .text-muted,
 .preview-list .preview-item .preview-item-content p .content-category {
   color: #000 !important;
+  margin-top: 35px;
 }
 
 .text-black-50 {
