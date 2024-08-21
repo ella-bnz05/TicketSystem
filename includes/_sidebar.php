@@ -42,7 +42,7 @@
         </a>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="testing.php">
+        <a class="nav-link" href="services.php">
           <span class="menu-icon">
             <i class="mdi mdi-table-large"></i>
           </span>
@@ -50,7 +50,7 @@
         </a>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="performance.php">
+        <a class="nav-link" href="testing.php">
           <span class="menu-icon">
             <i class="mdi mdi-chart-bar"></i>
           </span>

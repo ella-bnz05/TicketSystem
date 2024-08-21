@@ -12241,7 +12241,8 @@ textarea.is-invalid.tt-hint {
 .wizard>.actions a {
   display: inline-block;
   font-weight: 400;
-  color: #ffffff;
+  color:#ef2f1a;
+  border-color: #ef2f1a;
   text-align: center;
   vertical-align: middle;
   user-select: none;
@@ -19590,7 +19591,7 @@ button.bg-dark:focus {
 
 .pt-5,
 .py-5 {
-  padding-top: 3rem !important;
+  padding-top: 5rem !important;
 }
 
 .pr-5,
@@ -23985,7 +23986,7 @@ code {
 }
 
 .card .card-body {
-  padding: 1.75rem 1.5625rem;
+  padding: 0.90rem;  
 }
 
 .card .card-body+.card-body {
@@ -30654,7 +30655,7 @@ div.tagsinput span.tag a {
 }
 
 .page-body-wrapper {
-  min-height: 100vh;
+  min-height: 200vh;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -30664,6 +30665,7 @@ div.tagsinput span.tag a {
   transition: all 0.25s ease;
   width: calc(100% - 244px);
   color:#ffffff;
+  background-color: #ffffff;
 }
 
 .page-body-wrapper.full-page-wrapper {
