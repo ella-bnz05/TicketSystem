@@ -1,6 +1,6 @@
 <?php
 
-include '../../../backend/config/config.php';
+include '../../../backend/db/config.php';
 
 // Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Redirect user back to the previous page
                 // echo '<script>alert("Account username has been updated successfully.");</script>';
                 // echo '<script>history.go(-1);</script>';
-                header('Location: ../../../frontend/views/user/user-profile.php?alert=username_updated');
+                header('Location: ../../../user-profile.php?alert=username_updated');
             } else {
                 // Handle the error case when the specified column is invalid
                 echo "<script>alert('Error updating username.');</script>";
