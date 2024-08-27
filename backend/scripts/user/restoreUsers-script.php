@@ -1,7 +1,7 @@
 <?php
 
 include 'C:\xampp\htdocs\TS\db\config.php';
-include 'C:\xampp\htdocs\TS\controllers\UsersController.php';
+include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
 
 // Get the user id from the URL or POST data
 $user_id = $_GET['id'] ?? $_POST['id'];

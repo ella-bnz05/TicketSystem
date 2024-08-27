@@ -30,7 +30,7 @@ class TechnicianControllerClass
 
             // Add the "Rate" option in the dropdown
             // $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">Rate</a>';
-            $html .= '<a href="../../TS/backend/scripts/technician/restoreTechnician-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info dropdown-item"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
+            $html .= '<a href="/TS/backend/scripts/technician/restoreTechnician-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info dropdown-item"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
 
         }
 
@@ -81,7 +81,7 @@ class TechnicianControllerClass
 
             // Add the "Rate" option in the dropdown
             // $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">Rate</a>';
-            $html .= '<a href="../../TS/backend/scripts/technician/deleteTechnician-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger dropdown-item"><span class="material-symbols-outlined">delete</span>DELETE</a>';
+            $html .= '<a href="/TS/backend/scripts/technician/deleteTechnician-script.php?id=' . htmlspecialchars($row['id']) . '&alert=service_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger dropdown-item"><span class="material-symbols-outlined">delete</span>DELETE</a>';
 
 
         }

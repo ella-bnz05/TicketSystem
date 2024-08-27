@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Redirect to dashboard if the user is already logged in
+if (isset($_SESSION['user_id'])) {
+    header('Location: ../../TS/dashboard.php');
+    exit();
+}
+
+include 'C:\xampp\htdocs\TS\db\config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,8 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="../img/CITRMU_Logo.png" />
-    <title> Ticketing System - CITRMU</title>
-
+    <title>Ticketing System - CITRMU</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -30,34 +41,58 @@
         <div class="login-screen row align-items-center">
             <div class="screen">
                 <div class="screen__content">
-                    <form class="login__title">
+                    <form action="/TS/login/login-script.php" method="POST" class="login__title">
+                        <?php
+                        if (isset($_GET['alert'])) {
+                            // Get the value of the `alert` parameter.
+                            $alertType = $_GET['alert'];
+
+                            // Display an alert message based on the value of the `alert` parameter.
+                            switch ($alertType) {
+                                case 'user_not_found':
+                                    echo '<div class="bg-secondary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
+                                    echo 'USER NOT FOUND.';
+                                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                                    echo '</div>';
+                                    break;
+                                case 'incorrect_password':
+                                    echo '<div class="bg-secondary text-white alert alert-danger alert-dismissible fade show" role="alert">';
+                                    echo 'INCORRECT PASSWORD.';
+                                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                                    echo '</div>';
+                                    break;
+                                default:
+                                    echo '<div class="bg-secondary text-white alert alert-danger alert-dismissible fade show" role="alert">';
+                                    echo 'Unknown Alert Type.';
+                                    echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                                    echo '</div>';
+                                    break;
+                            }
+                        } ?>
                         <div class="login__field">
                             <div class="d-flex gap-1 align-items-center pb-1 w-10">
-                                <h1 class="fs-7"> <code class="text-success">CITRMU</code><br /> TICKETING
-                                    SYSTEM</h1>
-                                <img src="..\img\CITRMU_Logo.png" alt="CITRMU Brand" class="custom-logo">
-
+                                <h1 class="fs-7"><code class="text-success">CITRMU</code><br />TICKETING SYSTEM</h1>
+                                <img src="../img/CITRMU_Logo.png" alt="CITRMU Brand" class="custom-logo">
                             </div>
                         </div>
                         <div class="login__field">
                             <i class="login__icon fas fa-user"></i>
                             <input type="text" class="login__input" placeholder="Username" aria-label="username"
-                                id="username" name="username">
+                                id="username" name="username" required>
                         </div>
                         <div class="login__field">
                             <i class="login__icon fas fa-lock"></i>
                             <input type="password" class="login__input" placeholder="Password" aria-label="Password"
-                                id="password" name="password">
+                                id="password" name="password" required>
                         </div>
-                        <button class="button login__submit">
+                        <button class="button login__submit" type="submit" name="btn_SignIn">
                             <span class="button__text">Log In Now</span>
                             <i class="button__icon fas fa-chevron-right"></i>
                         </button>
                     </form>
-
                 </div>
                 <div class="screen__background">
-                    <!--<span class="screen__background__shape screen__background__shape4"></span> -->
+                    <!--<span class="screen__background__shape screen__background__shape4"></span>-->
                     <span class="screen__background__shape screen__background__shape3"></span>
                     <span class="screen__background__shape screen__background__shape2"></span>
                     <span class="screen__background__shape screen__background__shape1"></span>
@@ -65,11 +100,8 @@
             </div>
         </div>
     </div>
-    </div>
-
-
-
 </body>
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
@@ -77,7 +109,6 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        /*font-family: Raleway, sans-serif;*/
     }
 
     .container {
@@ -248,17 +279,6 @@
         }
     }
 
-    @media (max-width: 720px) {
-        .screen {
-            height: auto;
-            width: 100%;
-        }
-
-        .login__title h1 {
-            font-size: 1.5rem;
-        }
-    }
-
     @media (max-width: 576px) {
 
         .screen__background__shape1,
@@ -284,7 +304,6 @@
             position: relative;
         }
 
-
         .login__submit {
             margin: 30px 0px;
         }
@@ -296,9 +315,7 @@
 
         input::placeholder {
             color: #94dbc2;
-            /* Change this to your desired color */
             font-style: italic;
-            /* Optional: make placeholder text italic */
         }
 
         .text-success {

@@ -85,12 +85,12 @@ class ConfigClass
         return $input;
     }
 
- public static function baseURL(): string
-{
-    return 'http://localhost/TS/';
-        // return 'http://localhost/JKPS-web-development/ON%20DEVELOPMENT/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // LAPTOP
-        // return 'http://localhost/.OFFICE_PROJECTS/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // PC
-   //     return 'http://172.16.200.246:4000/'; // SERVER
-  }
+public static function baseURL(): string
+   {
+   return 'http://localhost/TS/';
+        //return 'http://localhost/JKPS-web-development/ON%20DEVELOPMENT/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // LAPTOP
+       //return 'http://localhost/.OFFICE_PROJECTS/New-CITRMU-HelpDesk-Support-System-DEVELOPMENT/'; // PC
+   //  return 'http://172.16.200.246:4000/'; // SERVER
+   }
 
 }

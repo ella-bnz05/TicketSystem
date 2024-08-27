@@ -1,12 +1,11 @@
 <?php
 session_start();
-//if (!isset($_SESSION['user_id'])) {
-//header('Location: ../../../frontend/auth/index.php');
-//	exit();
-//}
-
-include 'db/config.php';
-include 'controllers/UsersController.php';
+if (!isset($_SESSION['user_id'])) {
+header('Location: ../../../login/login.php');
+exit();
+}
+include 'C:\xampp\htdocs\TS\db\config.php';
+include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
 //include '../../../backend/controllers/tickets/ticketsController.php';
 //include '../../../backend/controllers/dashboard/dashboardController.php';
 ?>
