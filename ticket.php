@@ -1,16 +1,15 @@
 <?php
 session_start();
-//if (!isset($_SESSION['user_id'])) {
-//header('Location: ../../../frontend/auth/index.php');
-// exit();
-//}
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../../../login/login.php');
+    exit();
+}
 
-include 'db/config.php';
+include 'backend/db/config.php';
 include 'controllers/UsersController.php';
 include 'controllers/ticketsController.php';
 include 'controllers/technicianController.php';
-
-//include '../../../backend/controllers/dashboard/dashboardController.php' ;
+include 'controllers/dashboardController.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +18,7 @@ include 'controllers/technicianController.php';
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/CITRMU_Logo.png" />
     <title> Ticketing System - CITRMU</title>
@@ -121,7 +121,7 @@ include 'controllers/technicianController.php';
                         class="btn btn-secondary d-flex gap-2 align-items-center"><span
                             class="material-symbols-outlined">
                             settings_backup_restore
-                        </span></span>Archived Tickets</a>
+                        </span></span>Completed Tickets</a>
                 </div>
                 <div class="card-body" style="height: 80vh; overflow-y: auto;">
                     <table class="table table-striped table-hover">
@@ -622,7 +622,7 @@ include 'controllers/technicianController.php';
                                     </div>
                                 </div>
 
-                                <div class="d-flex gap-2 mt-5">
+                                <!--<div class="d-flex gap-2 mt-5">
                                     <span class="fs-5 text-muted">
                                         Rating Details
                                     </span>
@@ -657,7 +657,7 @@ include 'controllers/technicianController.php';
                                             placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
                                     </div>
                                 </div>
-                                <div class="d-flex gap-2">
+                                <!--div class="d-flex gap-2">
                                     <div class="form-group w-100">
                                         <label for="ticket_feedback" class="py-2 text-muted">FEEDBACK &
                                             SUGGESTIONS:<span class="text-danger">*</span></label>
@@ -666,7 +666,7 @@ include 'controllers/technicianController.php';
                                             placeholder="I am very impressed with the services provided by the City Information Technology and Records Management Unit (CITRMU). They are very efficient, reliable, and responsive to the IT needs of the city government. They handle troubleshooting, repair, maintenance, and evaluation of various IT equipment and systems. They also manage the CCTV footage and records of the city. They are always ready to assist and accommodate the inquiries and requests of their clients. They demonstrate a high level of professionalism, competence, and dedication in their work. Thank you, CITRMU, for your excellent IT support!"
                                             name="ticket_feedback"></textarea>
                                     </div>
-                                </div>
+                                </div-->
                                 <div class="text-info py-3">SELECT A TECHNICIAN TO ASSIGN</div>
                                 <div class="d-flex gap-2">
                                     <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"

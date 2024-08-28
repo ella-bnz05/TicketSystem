@@ -193,64 +193,64 @@ class TicketsControllerClass
     public static function getTicketsTicketsIndex(): string
     {
         $currentUserID = $_SESSION['unique_id'];
-
+    
+        // Initialize $stmt to null
+        $stmt = null;
+    
+        // Determine SQL query based on user role
         if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER') {
             $sql = "SELECT * FROM tbl_tickets WHERE is_done = 0 AND is_deleted = 0 ORDER BY id DESC";
             $stmt = ConfigClass::prepareAndExecute($sql, []);
-        }
-
-        if ($_SESSION['user_role'] === 'REQUESTOR') {
+        } elseif ($_SESSION['user_role'] === 'REQUESTOR') {
             $sql = "SELECT * FROM tbl_tickets WHERE is_done = 0 AND is_deleted = 0 AND requestor_unique_id = :currentUserID ORDER BY id DESC";
             $stmt = ConfigClass::prepareAndExecute($sql, [':currentUserID' => $currentUserID]);
-        }
-
-        if ($_SESSION['user_role'] === 'TECHNICIAN') {
+        } elseif ($_SESSION['user_role'] === 'TECHNICIAN') {
             $sql = "SELECT * FROM tbl_tickets WHERE is_done = 0 AND is_deleted = 0 AND technician_assigned_id = :currentUserID ORDER BY id DESC";
             $stmt = ConfigClass::prepareAndExecute($sql, [':currentUserID' => $currentUserID]);
         }
-
-        $result = $stmt->fetchAll();
-
+    
+        $result = $stmt ? $stmt->fetchAll() : [];
+    
         $html = '';
-
+    
         foreach ($result as $row) {
             $html .= '<tr class="text-center">';
-            $html .= '<td class="py-3 text-muted">' . $row['unique_id'] . '</td>';
-            $html .= '<td class="py-3">' . $row['requestor_username'] . '</td>';
-            $html .= '<td class="py-3">' . $row['requestor_department'] . '</td>';
-            $html .= '<td class="py-3 text-primary">' . $row['is_assigned_to'] . '</td>';
-            $html .= '<td class="py-3">' . $row['service_request'] . '</td>';
-            $html .= '<td class="py-3">' . $row['ticket_subject'] . '</td>';
-            $html .= '<td class="py-3">' . $row['ticket_description'] . '</td>';
-            $html .= '<td class="py-3">' . $row['created_at'] . '</td>';
+            $html .= '<td class="py-3 text-muted">' . htmlspecialchars($row['unique_id'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['requestor_username'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['requestor_department'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3 text-primary">' . htmlspecialchars($row['is_assigned_to'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['service_request'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['ticket_subject'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['ticket_description'], ENT_QUOTES, 'UTF-8') . '</td>';
+            $html .= '<td class="py-3">' . htmlspecialchars($row['created_at'], ENT_QUOTES, 'UTF-8') . '</td>';
             $html .= '<td class="py-3">';
-
+    
             // Dropdown button to provide more options
             $html .= '<div class="dropdown">';
-            $html .= '<button class="btn hover-effect d-flex align-items-center gap-2 text-success dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+            $html .= '<button class="btn hover-effect d-flex align-items-center gap-2 text-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
             $html .= '<span class="material-symbols-outlined h-auto">settings</span>';
             $html .= '</button>';
             $html .= '<div class="dropdown-menu">';
-
+    
             if ($_SESSION['user_role'] === 'ADMIN') {
-                // Add the "Rate" option in the dropdown
-                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">RATE</a>';
-
-                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">EDIT</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">RATE</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editFormModal"' . $row['id'] . '">EDIT</a>';
             }
-
+    
             if ($_SESSION['user_role'] === 'REQUESTOR') {
-                // Add the "Rate" option in the dropdown
-                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">RATE</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">RATE</a>';
             }
-
+    
             if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER') {
-                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#assignTechnicianFormModal"' . $row['id'] . '">ASSIGN A TECHNICIAN</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#assignTechnicianFormModal"' . $row['id'] . '">ASSIGN A TECHNICIAN</a>';
             }
-
-
+    
+            $html .= '</div>'; // Close dropdown-menu div
+            $html .= '</div>'; // Close dropdown div
+            $html .= '</td>'; // Close table cell
+            $html .= '</tr>'; // Close table row
         }
-
+    
         return $html;
     }
 

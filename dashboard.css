@@ -15765,6 +15765,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 10px;
   padding: 1.25rem;
+  border: green;
   color: var(--bs-card-color);
 }
 
