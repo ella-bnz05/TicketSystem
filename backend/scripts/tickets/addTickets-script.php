@@ -53,5 +53,5 @@ $stmt = ConfigClass::prepareAndExecute($sql, [
 ]);
 
 // Redirect to the desired page
-header('Location: /TS/testing.php?alert=new_ticket');
+header('Location: /../../TS/ticket.php?alert=new_ticket');
 exit(); // Ensure script execution stops

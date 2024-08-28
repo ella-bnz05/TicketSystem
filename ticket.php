@@ -349,7 +349,7 @@ include 'controllers/dashboardController.php';
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="../../../backend/scripts/tickets/updateTickets-script.php"
+                    <form action="backend/scripts/tickets/updateTickets-script.php"
                         method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
@@ -524,7 +524,7 @@ include 'controllers/dashboardController.php';
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="../../../backend/scripts/tickets/updateTickets-script.php"
+                    <form action="backend/scripts/tickets/updateTickets-script.php"
                         method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
@@ -657,7 +657,7 @@ include 'controllers/dashboardController.php';
                                             placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
                                     </div>
                                 </div>
-                                <!--div class="d-flex gap-2">
+                               div class="d-flex gap-2">
                                     <div class="form-group w-100">
                                         <label for="ticket_feedback" class="py-2 text-muted">FEEDBACK &
                                             SUGGESTIONS:<span class="text-danger">*</span></label>
