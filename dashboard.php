@@ -194,7 +194,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
         <div class="card">
           <div class="card-body">
             <div class="d-flex flex-row justify-content-between">
-              <h4 class="card-title mb-1">RATINGS</h4>
+              <h4 class="card-title mb-1">EVALUATION</h4>
               <p class="text-muted mb-1">Your data status</p>
             </div>
             <div class="row">
@@ -552,7 +552,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-us"></i>
                         </td>
-                        <td>USA</td>
+                        <td>HRMO</td>
                         <td class="text-right"> 1500 </td>
                         <td class="text-right font-weight-medium"> 56.35% </td>
                       </tr>
@@ -560,7 +560,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-de"></i>
                         </td>
-                        <td>Germany</td>
+                        <td>OBO</td>
                         <td class="text-right"> 800 </td>
                         <td class="text-right font-weight-medium"> 33.25% </td>
                       </tr>
@@ -568,7 +568,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-au"></i>
                         </td>
-                        <td>Australia</td>
+                        <td>CSWD</td>
                         <td class="text-right"> 760 </td>
                         <td class="text-right font-weight-medium"> 15.45% </td>
                       </tr>
@@ -576,7 +576,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-gb"></i>
                         </td>
-                        <td>United Kingdom</td>
+                        <td>CSO</td>
                         <td class="text-right"> 450 </td>
                         <td class="text-right font-weight-medium"> 25.00% </td>
                       </tr>
@@ -584,7 +584,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-ro"></i>
                         </td>
-                        <td>Romania</td>
+                        <td>GSO</td>
                         <td class="text-right"> 620 </td>
                         <td class="text-right font-weight-medium"> 10.25% </td>
                       </tr>
@@ -592,7 +592,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
                         <td>
                           <i class="flag-icon flag-icon-br"></i>
                         </td>
-                        <td>Brasil</td>
+                        <td>ADMIN</td>
                         <td class="text-right"> 230 </td>
                         <td class="text-right font-weight-medium"> 75.00% </td>
                       </tr>
