@@ -1,6 +1,6 @@
 <?php
 
-include '../../../backend/config/config.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
 
 // Get the user id from the URL or POST data
 $id = $_GET['id'] ?? $_POST['id'];

@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-header('Location: ../../TS/login/login.php');
-exit();
+  header('Location: ../../TS/login/login.php');
+  exit();
 }
 include 'C:\xampp\htdocs\TS\db\config.php';
 include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
@@ -105,8 +105,8 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall <br>CITRMU Personel</h6>
             <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 font-weight-bold mb-0"">
-              <h6 class="font-weight-bold mb-0""><?php echo DashboardControllerClass::getTechnician(); ?>
-            </h6>
+              <h6 class=" font-weight-bold mb-0""><?php echo DashboardControllerClass::getTechnician(); ?>
+              </h6>
             </div>
           </div>
         </div>
@@ -157,12 +157,17 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
       <div class="col-md-4 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Monthly Tickets</h4>
-            <!-- <canvas id="transaction-history" class="transaction-chart"></canvas> -->
+
+            <div class=" d-flex d-md-block rounded mt-3">
+              <h2 class="card-title"> <a data-bs-toggle="modal" data-bs-target="#addNewUserModal"
+                  class="btn btn-secondary gap-2 align-items-center"><span
+                    class="icon-plus-outline"></span>+</a> Create Tickets </h>
+            </div>
+            <!--h3 class="card-title">Monthly Tickets </h3>
+ <canvas id="transaction-history" class="transaction-chart"></canvas>
             <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
               <div class="text-md-center text-xl-left">
-                <h6 class="mb-1">Total Services</h6>
-                <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                <h6 class="mb-1">Daily Tickets</h6>
               </div>
               <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                 <h6 class="font-weight-bold mb-0">000</h6>
@@ -170,8 +175,7 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
             </div>
             <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
               <div class="text-md-center text-xl-left">
-                <h6 class="mb-1">Total of tickets</h6>
-                <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                <h6 class="mb-1">Weekly Tickets</h6>
               </div>
               <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                 <h6 class="font-weight-bold mb-0">000</h6>
@@ -179,13 +183,12 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
             </div>
             <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
               <div class="text-md-center text-xl-left">
-                <h6 class="mb-1">Total Services</h6>
-                <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
+                <h6 class="mb-1">Monthly Tickets</h6>
               </div>
               <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                 <h6 class="font-weight-bold mb-0">000</h6>
               </div>
-            </div>
+            </div-->
           </div>
         </div>
       </div>
@@ -312,9 +315,9 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                     </th>
                     <th> Department </th>
                     <th> Ticket No </th>
-                    <th> Product Cost </th>
-                    <th> Project </th>
-                    <th> Service </th>
+                    <th> Assigned to</th>
+                    <th> Service Request </th>
+                    <th> Ticket Subject</th>
                     <th> Start Date </th>
                     <th> Status </th>
                   </tr>
@@ -333,10 +336,10 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                       <span class="pl-2">Aalihya Rivero</span>
                     </td>
                     <td> 02312 </td>
-                    <td> $14,500 </td>
-                    <td> Dashboard </td>
-                    <td> Credit card </td>
-                    <td> 04 Dec 2019 </td>
+                    <td> Jihro </td>
+                    <td> COMPUTER & NETWORK SUPPORT</td>
+                    <td> Network issue </td>
+                    <td> 04 Aug 2024 </td>
                     <td>
                       <div class="btn btn-green">Approved</div>
                     </td>
@@ -354,10 +357,10 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                       <span class="pl-2">Estella Bryan</span>
                     </td>
                     <td> 02312 </td>
-                    <td> $14,500 </td>
-                    <td> Website </td>
-                    <td> Cash on delivered </td>
-                    <td> 04 Dec 2019 </td>
+                    <td> Aicer </td>
+                    <td> COMPUTER & NETWORK SUPPORT </td>
+                    <td> Printer issue </td>
+                    <td> 15 Aug 2024 </td>
                     <td>
                       <div class="btn btn-yellow">Pending</div>
                     </td>
@@ -375,10 +378,10 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                       <span class="pl-2">Lucy Abbott</span>
                     </td>
                     <td> 02312 </td>
-                    <td> $14,500 </td>
-                    <td> App design </td>
-                    <td> Credit card </td>
-                    <td> 04 Dec 2019 </td>
+                    <td> Archie </td>
+                    <td> COMPUTER & NETWORK SUPPORT</td>
+                    <td> PC issue</td>
+                    <td> 19 Aug 2024 </td>
                     <td>
                       <div class="btn btn-red">Eme</div>
                     </td>
@@ -396,10 +399,10 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                       <span class="pl-2">Peter Gill</span>
                     </td>
                     <td> 02312 </td>
-                    <td> $14,500 </td>
-                    <td> Development </td>
-                    <td> Online Payment </td>
-                    <td> 04 Dec 2019 </td>
+                    <td> Ella </td>
+                    <td> COMPUTER & NETWORK SUPPORT </td>
+                    <td> Network issue </td>
+                    <td> 20 Aug 2024 </td>
                     <td>
                       <div class="btn btn-green">Approved</div>
                     </td>
@@ -417,10 +420,10 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                       <span class="pl-2">Sallie Reyes</span>
                     </td>
                     <td> 02312 </td>
-                    <td> $14,500 </td>
-                    <td> Website </td>
-                    <td> Credit card </td>
-                    <td> 04 Dec 2019 </td>
+                    <td> Aalihya </td>
+                    <td> COMPUTER & NETWORK SUPPORT </td>
+                    <td> PC issue </td>
+                    <td> 22 Dec 2024 </td>
                     <td>
                       <div class="btn btn-yellow">Pending</div>
                     </td>
@@ -609,14 +612,14 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
     </div>
   </div>
   <!-- content-wrapper ends -->
- 
+
 </div>
 </div>
 </div>
- <!-- partial:partials/_footer.html -->
- <?php
-    include 'includes/_footer.php';
-    ?>
+<!-- partial:partials/_footer.html -->
+<?php
+include 'includes/_footer.php';
+?>
 </div>
 
 <!-- partial -->

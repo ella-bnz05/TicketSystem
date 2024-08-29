@@ -84,21 +84,27 @@ include 'controllers/dashboardController.php';
 
                     // Display an alert message based on the value of the `alert` parameter.
                     switch ($alertType) {
-                        case 'new_service':
+                        case 'new_ticket':
                             echo '<div class="bg-primary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                            echo 'A new service has been added.';
+                            echo 'A new ticket has been added.';
                             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                             echo '</div>';
                             break;
-                        case 'service_deleted':
+                        case 'ticket_deleted':
                             echo '<div class="bg-secondary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                            echo 'A service has been deleted.';
+                            echo 'A ticket has been deleted.';
                             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                             echo '</div>';
                             break;
-                        case 'service_restored':
+                        case 'ticket_restored':
                             echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                            echo 'A service has been restored.';
+                            echo 'A ticket has been restored.';
+                            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                            echo '</div>';
+                            break;
+                        case 'ticket_completed':
+                            echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
+                            echo 'A ticket has been completed.';
                             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                             echo '</div>';
                             break;
@@ -147,7 +153,7 @@ include 'controllers/dashboardController.php';
         </div>
     </div>
 
-    <!-- Modal Add service -->
+    <!-- Modal Add Ticket -->
     <div class="modal fade" id="addNewUserModal" tabindex="-1" aria-labelledby="addNewUserModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -284,14 +290,14 @@ include 'controllers/dashboardController.php';
             </div>
         </div>
     </div>
-    <!--END MODAL CREATE SERVICE -->
-    <!-- Modal -->
+    <!--END MODAL CREATE TICKET -->
+    <!-- Modal completed-->
     <div class="modal fade" id="archivedUserModal" tabindex="-1"
         aria-labelledby="archivedUserModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class=" modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="archivedUserModalLabel">Restore deleted tickets
+                    <h1 class="modal-title fs-5" id="archivedUserModalLabel">Completed Tickets
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
@@ -319,7 +325,6 @@ include 'controllers/dashboardController.php';
             </div>
         </div>
     </div>
-
     <?php
     $sql = "SELECT * FROM tbl_tickets";
     $stmt = ConfigClass::prepareAndExecute($sql, []);
@@ -337,7 +342,6 @@ include 'controllers/dashboardController.php';
         $created_at = $row['created_at'];
     }
     ?>
-
     <!-- Modal for Rating Form -->
     <div class="modal fade" id="ratingFormModal" tabindex="-1" aria-labelledby="ratingFormModalLabel"
         aria-hidden="true">
@@ -349,7 +353,7 @@ include 'controllers/dashboardController.php';
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="backend/scripts/tickets/updateTickets-script.php"
+                    <form action="../../TS/backend/scripts/tickets/updateTickets-script.php"
                         method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
@@ -393,7 +397,7 @@ include 'controllers/dashboardController.php';
                                                     class="text-danger">*</span></label>
                                             <select class="form-control h-75 w-100" name="is_assigned_to"
                                                 id="is_assigned_to" required>
-                                                <option value="<?php echo $is_assigned_to; ?>" selected>
+                                                <option value=" <?php echo $is_assigned_to; ?>" selected>
                                                     <?php echo $is_assigned_to; ?>
                                                 </option>
                                             </select>
@@ -512,10 +516,11 @@ include 'controllers/dashboardController.php';
             </div>
         </div>
     </div>
+
+
     <!-- Modal for Assigning Technician Form -->
     <div class="modal fade" id="assignTechnicianFormModal" tabindex="-1"
-        aria-labelledby="
-         l" aria-hidden="true">
+        aria-labelledby="l" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -525,7 +530,7 @@ include 'controllers/dashboardController.php';
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="backend/scripts/tickets/updateTickets-script.php"
+                    <form action="../../TS/backend/scripts/tickets/updateTickets-script.php"
                         method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">

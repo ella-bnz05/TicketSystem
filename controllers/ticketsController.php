@@ -37,7 +37,7 @@ class TicketsControllerClass
             $html .= '<td class="py-3">';
             // $html .= '<a href="../private/edit_member.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect member-details"><span class="material-symbols-outlined">search</span></a>';
             // $html .= '<a href="../private/edit_user.php?id=' . htmlspecialchars($row['id']) . '" class="btn hover-effect"><span class="material-symbols-outlined">edit</span></a>';
-            $html .= '<a href="../../../backend/scripts/user/restoreUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
+          //  $html .= '<a href="../../../backend/scripts/user/restoreUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-info"><span class="material-symbols-outlined">replay</span>RESTORE</a>';
             $html .= '</td>';
             $html .= '</tr>';
         }

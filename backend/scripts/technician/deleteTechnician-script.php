@@ -1,6 +1,6 @@
 <?php
 
-include '../../../backend/config/config.php';
+include 'C:\xampp\htdocs\TS\db\config.php';
 
 
 $id = $_GET['id'] ?? $_POST['id'];

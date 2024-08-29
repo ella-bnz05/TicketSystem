@@ -24,16 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt_technician_assigned_id = ConfigClass::prepareAndExecute($sql, [':is_assigned_to' => $is_assigned_to]);
     $technician_assigned_id = $stmt_technician_assigned_id->fetchColumn();
 
-    // Determine if the ticket is done based on user role
     if ($_SESSION['user_role'] === 'MANAGER') {
         $is_done = 0;
     } elseif ($_SESSION['user_role'] === 'REQUESTOR') {
         $is_done = 1;
-    } else {
-        // Handle cases where the user role does not match
-        $is_done = null; // Or some default value
-    }
-
+    } 
+    
     // Update the database record
     $sql = "UPDATE tbl_tickets SET
         requestor_username = :requestor_username,
