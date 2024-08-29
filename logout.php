@@ -1,14 +1,7 @@
 <?php
-session_start(); // Start the session
-session_unset(); // Unset all session variables
-session_destroy(); // Destroy the session
+session_start();
+session_destroy();
+header("Refresh:0; url=login/login.php");
 
-// Clear cookies
-if (isset($_COOKIE[session_name()])) {
-    setcookie(session_name(), '', time() - 42000, '/');
-}
-
-// Redirect to login page
-header('Location: ../TS/login/login.php');
-exit();
+exit;
 ?>

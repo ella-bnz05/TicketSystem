@@ -9454,6 +9454,7 @@ dt {
 dd {
   margin-bottom: .5rem;
   margin-left: 0;
+  color: black;
 }
 
 blockquote {
@@ -10034,6 +10035,7 @@ pre code {
   width: 100%;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+  color: black;
 }
 
 .col {
@@ -25964,7 +25966,7 @@ div.tagsinput {
 .jsgrid .jsgrid-table td {
   vertical-align: middle;
   font-size: 0.875rem;
-  line-height: .5;
+  line-height: 1;
   /*white-space: nowrap; */
 }
 

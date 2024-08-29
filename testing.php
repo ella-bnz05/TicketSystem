@@ -1,60 +1,100 @@
+<?php
+session_start();
+//if (!isset($_SESSION['user_id'])) {
+//header('Location: ../../../frontend/auth/index.php');
+// exit();
+//}
+
+include 'db/config.php';
+include 'controllers/UsersController.php';
+//include '../../../backend/controllers/tickets/ticketsController.php' ;
+//include '../../../backend/controllers/dashboard/dashboardController.php' ;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="img/CITRMU_Logo.png" />
-  <title>Employee Performance Evaluation</title>
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-  <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
-  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.7.96/css/materialdesignicons.min.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="evaluation.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/CITRMU_Logo.png" />
+    <title> Ticketing System - CITRMU</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/6.7.96/css/materialdesignicons.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="user_management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- End layout styles -->
+</head>
 
 <body>
     <div class="container-scroller">
-        <!-- Sidebar -->
-        <?php include 'includes/_sidebar.php'; ?>
-        
-        <!-- Page Body Wrapper -->
+        <!-- partial:partials/_sidebar.html -->
+        <?php
+        include 'includes/_sidebar.php';
+        ?>
+        <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <!-- Navbar -->
-            <?php include 'includes/_navbar.php'; ?>
-            
-            <!-- Content Wrapper -->
-            <div class="content-wrapper">
-                <div class="col-lg-12">
+            <!-- partial:partials/_navbar.html -->
+            <?php
+            include 'includes/_navbar.php';
+            ?>
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <!-- Optional: Include custom scripts -->
+            <script>
+                // Add custom JavaScript here if needed
+            </script>
+</body>
+
+
+<div class="main-panel">
+    <div class="row gutters">
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+                <div class="col-sm-12">
                     <div class="card card-outline card-success">
-                        <div class="card-header">
+                        <div class="card-header" style="background-color: white;">
                             <div class="d-flex justify-content-between">
                                 <div class="card-tools">
                                 </div>
-                                <div class="search-container">
-                                    <input type="text" class="form-control search-input" placeholder="Search...">
+                                <div class="search-container" >
+                                    <input type="text" class="form-control search-input" style="background-color:whitesmoke; font: black;" placeholder="Search...">
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table table-hover table-bordered" id="list">
+                            <table class="table table-striped table-hover" id="list">
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
-                                        <th>Task</th>
-                                        <th>Name</th>
-                                        <th>Evaluator</th>
-                                        <th width="15%">Performance Average</th>
-                                        <th>Action</th>
+                                        <th>TASK</th>
+                                        <th>NAME</th>
+                                        <th>EVALUATOR</th>
+                                        <th width="15%">PERFORMANCE AVERAGE</th>
+                                        <th>ACTION</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -155,15 +195,31 @@
         </div>
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </div>
+  
+</div>
+
+</div>
+
+</html>
+</div>
+</div>
+<?php
+    include 'includes/_footer.php';
+    ?>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/off-canvas.js"></script>
     <script src="assets/js/hoverable-collapse.js"></script>
     <script src="assets/js/misc.js"></script>
-    
-    <!-- Footer -->
-    <?php include 'includes/_footer.php'; ?>
+
+<!--
+<-->
+
 </body>
 
-</html>
+</htm>
