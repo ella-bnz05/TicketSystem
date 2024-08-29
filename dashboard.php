@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['user_id'])) {
-header('Location: ../../../login/login.php');
+header('Location: ../../TS/login/login.php');
 exit();
 }
 include 'C:\xampp\htdocs\TS\db\config.php';
