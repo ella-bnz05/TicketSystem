@@ -17,8 +17,8 @@
               <span class="count bg-success"></span>
             </div>
             <div class="profile-name">
-              <h5 class="mb-0 font-weight-normal">Aalihya M. Rivero</h5>
-              <span>Kpop Member</span>
+              <h3 class="mb-0 font-weight-bold"><span><?php echo $_SESSION['user_username']; ?></h3>
+              <span><?php echo $_SESSION['user_role']; ?></span></span>
             </div>
           </div>
       </li>

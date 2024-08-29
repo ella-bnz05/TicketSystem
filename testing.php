@@ -10,7 +10,6 @@ include 'controllers/UsersController.php';
 //include '../../../backend/controllers/tickets/ticketsController.php' ;
 //include '../../../backend/controllers/dashboard/dashboardController.php' ;
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,59 +41,44 @@ include 'controllers/UsersController.php';
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
-    <link rel="stylesheet" href="user_management.css">
+    <link rel="stylesheet" href="evaluation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- End layout styles -->
 </head>
 
 <body>
     <div class="container-scroller">
-        <!-- partial:partials/_sidebar.html -->
-        <?php
-        include 'includes/_sidebar.php';
-        ?>
-        <!-- partial -->
+        <!-- Sidebar -->
+        <?php include 'includes/_sidebar.php'; ?>
+        
+        <!-- Page Body Wrapper -->
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_navbar.html -->
-            <?php
-            include 'includes/_navbar.php';
-            ?>
-            <!-- jQuery -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <!-- Bootstrap JS -->
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            <!-- Optional: Include custom scripts -->
-            <script>
-                // Add custom JavaScript here if needed
-            </script>
-</body>
-
-
-<div class="main-panel">
-    <div class="row gutters">
-        <!-- Content Wrapper -->
-        <div class="content-wrapper">
-                <div class="col-sm-12">
+            <!-- Navbar -->
+            <?php include 'includes/_navbar.php'; ?>
+            
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <div class="col-lg-12">
                     <div class="card card-outline card-success">
-                        <div class="card-header" style="background-color: white;">
+                        <div class="card-header">
                             <div class="d-flex justify-content-between">
                                 <div class="card-tools">
                                 </div>
-                                <div class="search-container" >
-                                    <input type="text" class="form-control search-input" style="background-color:whitesmoke; font: black;" placeholder="Search...">
+                                <div class="search-container">
+                                    <input type="text" class="form-control search-input" placeholder="Search...">
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table table-striped table-hover" id="list">
+                            <table class="table table-hover table-bordered" id="list">
                                 <thead>
                                     <tr>
                                         <th class="text-center">#</th>
-                                        <th>TASK</th>
-                                        <th>NAME</th>
-                                        <th>EVALUATOR</th>
-                                        <th width="15%">PERFORMANCE AVERAGE</th>
-                                        <th>ACTION</th>
+                                        <th>Task</th>
+                                        <th>Name</th>
+                                        <th>Evaluator</th>
+                                        <th width="15%">Performance Average</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -195,31 +179,16 @@ include 'controllers/UsersController.php';
         </div>
     </div>
 
-
-    </div>
-  
-</div>
-
-</div>
-
-</html>
-</div>
-</div>
-<?php
-    include 'includes/_footer.php';
-    ?>
-</div>
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/off-canvas.js"></script>
     <script src="assets/js/hoverable-collapse.js"></script>
     <script src="assets/js/misc.js"></script>
-
-<!--
-<-->
-
+    
+    <!-- Footer -->
+    <?php include 'includes/_footer.php'; ?>
 </body>
 
-</htm>
+</html>
+shee
