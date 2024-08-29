@@ -11387,7 +11387,7 @@ pre code {
 
 .table-dark.table-hover tbody tr:hover {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.075);
+  background-color: rgba(195, 60, 60, 0.075);
 }
 
 @media (max-width: 575.98px) {
@@ -11471,7 +11471,7 @@ pre code {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1;
-  color: #495057;
+  color: #000000;
   background-color: #2A3038;
   background-clip: padding-box;
   border: 1px solid #2c2e33;
@@ -11581,7 +11581,7 @@ pre code {
 .typeahead[readonly],
 .tt-query[readonly],
 .tt-hint[readonly] {
-  background-color: #e9ecef;
+  background-color: #ffffff;
   opacity: 1;
 }
 
@@ -24462,14 +24462,14 @@ code {
 .typeahead,
 .tt-query,
 .tt-hint {
-  border: 1px solid #2c2e33;
+  border: 1px solid #000000;
   height: calc(2.25rem + 2px);
   font-weight: normal;
   font-size: 0.875rem;
   padding: 0.625rem 0.6875rem;
-  background-color: #000;
+  background-color: #ffffff;
   border-radius: 2px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .form-control:focus,
@@ -24583,7 +24583,7 @@ select.typeahead,
 select.tt-query,
 select.tt-hint {
   padding: .4375rem .75rem;
-  border: 0;
+  border:1px solid #000000;
   color: #4b5564;
 }
 

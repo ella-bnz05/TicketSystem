@@ -514,7 +514,8 @@ include 'controllers/dashboardController.php';
     </div>
     <!-- Modal for Assigning Technician Form -->
     <div class="modal fade" id="assignTechnicianFormModal" tabindex="-1"
-        aria-labelledby="assignTechnicianFormModalLabel" aria-hidden="true">
+        aria-labelledby="
+         l" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -610,7 +611,7 @@ include 'controllers/dashboardController.php';
                                     </div>
                                 </div>
                                 <div class="d-flex gap-2">
-                                    <div class="form-group w-100">
+                                    <div class="form-group w-80">
                                         <label for="ticket_description"
                                             class="py-2 text-muted">DESCRIPTION:<span
                                                 class="text-danger">*</span></label>

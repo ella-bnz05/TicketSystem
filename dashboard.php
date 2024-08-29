@@ -7,7 +7,7 @@ exit();
 include 'C:\xampp\htdocs\TS\db\config.php';
 include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
 //include '../../../backend/controllers/tickets/ticketsController.php';
-//include '../../../backend/controllers/dashboard/dashboardController.php';
+include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
 ?>
 
 <!DOCTYPE html>
@@ -82,7 +82,7 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall System <br> User Count</h6>
             <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-              <h6 class="font-weight-bold mb-0">000</h6>
+              <h6 class="font-weight-bold mb-0"><?php echo DashboardControllerClass::getUsersCount(); ?></h6>
             </div>
           </div>
         </div>
@@ -105,7 +105,8 @@ include 'C:\xampp\htdocs\TS\controllers/UsersController.php';
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall <br>CITRMU Personel</h6>
             <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-              <h6 class="font-weight-bold mb-0">000</h6>
+              <h6 class="total"><?php echo DashboardControllerClass::getTechnician(); ?>
+            </h6>
             </div>
           </div>
         </div>
