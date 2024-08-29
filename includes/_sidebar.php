@@ -13,8 +13,11 @@
         <div class="profile-desc">
           <div class="profile-pic">
             <div class="count-indicator">
-              <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
-              <span class="count bg-success"></span>
+            <div class="navbar-profile">
+            <img class="img-xs rounded-circle" src="../../TS/backend/user-images/<?php echo $_SESSION['unique_id']; ?>/<?php echo $_SESSION['img_user_profile_picture']; ?>"
+              alt="pic" />
+          </div>
+        </a>              
             </div>
             <div class="profile-name">
               <h3 class="mb-0 font-weight-bold"><span><?php echo $_SESSION['user_username']; ?></h3>

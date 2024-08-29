@@ -111,8 +111,11 @@
         <a class="nav-link dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           <div class="navbar-profile">
-            <img class="img-xs rounded-circle" src="img/profile-pic.jpg" alt="Profile Picture">
-            <p class="mb-0 d-none d-sm-block navbar-profile-name"><span><?php echo $_SESSION['user_username']; ?></span></p>
+            <img class="img-xs rounded-circle" src="../../TS/backend/user-images/<?php echo $_SESSION['unique_id']; ?>/<?php echo $_SESSION['img_user_profile_picture']; ?>"
+              alt="pic" />
+            <span class="user-name">
+              <?php echo $_SESSION['user_username']; ?>
+            </span>
             <i class="mdi mdi-menu-down d-none d-sm-block"></i>
           </div>
         </a>
@@ -140,7 +143,7 @@
             <div class="preview-item-content">
               <p class="preview-subject mb-1" id="logout">Log out</p>
             </div>
-           <!-- <script>
+            <!-- <script>
               const logoutButton = document.getElementById('logout');
 
               logoutButton.addEventListener('click', function() {

@@ -22594,6 +22594,7 @@ code {
 .img-xs {
   width: 35px;
   height: 35px;
+  margin-right:8px;
 }
 
 .img-ss {
@@ -29722,6 +29723,7 @@ div.tagsinput span.tag a {
 
 .navbar .navbar-menu-wrapper .count-indicator {
   position: relative;
+  marginp-
 }
 
 .navbar .navbar-menu-wrapper .count-indicator .count-symbol,
@@ -30171,7 +30173,6 @@ div.tagsinput span.tag a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   padding: 0.6rem 1.17rem;
   line-height: 1.25;
 }
