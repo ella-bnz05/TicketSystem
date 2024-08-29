@@ -22685,7 +22685,7 @@ code {
 }
 
 .bg-gray-dark {
-  background: #12151e;
+  background: var(--gray-lighter);
 }
 
 .text-twitter {
@@ -23995,7 +23995,7 @@ code {
 }
 
 .card .card-title {
-  color: #ffffff;
+  color: #000;
   margin-bottom: 1.125rem;
   text-transform: capitalize;
 }
@@ -24468,7 +24468,7 @@ code {
   padding: 0.625rem 0.6875rem;
   background-color: #2A3038;
   border-radius: 2px;
-  color: #ffffff;
+  color: #000;
 }
 
 .form-control:focus,
@@ -25838,7 +25838,7 @@ div.tagsinput {
   width: 40px;
   height: 37px;
   border-radius: 7px;
-  color: #ffffff;
+  color: #000;
   position: absolute; /* Position the icon box absolutely within its container */
   bottom: 1%; /* Align to the bottom */
   right: 3%; /* Align to the right */
@@ -25943,7 +25943,7 @@ div.tagsinput {
 .table,
 .jsgrid .jsgrid-table {
   margin-bottom: 0;
-  color: white;
+  color: black;
 }
 
 .table thead th,
@@ -30664,7 +30664,7 @@ div.tagsinput span.tag a {
   padding-right: 0;
   transition: all 0.25s ease;
   width: calc(100% - 244px);
-  color:#ffffff;
+  color:#000;
 }
 
 .page-body-wrapper.full-page-wrapper {

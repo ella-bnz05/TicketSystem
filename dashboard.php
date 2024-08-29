@@ -104,8 +104,8 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
               </div>
             </div>
             <h6 class="text-muted font-weight-normal" style="font-size: 1.5rem;">Overall <br>CITRMU Personel</h6>
-            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-              <h6 class="total"><?php echo DashboardControllerClass::getTechnician(); ?>
+            <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0 font-weight-bold mb-0"">
+              <h6 class="font-weight-bold mb-0""><?php echo DashboardControllerClass::getTechnician(); ?>
             </h6>
             </div>
           </div>
