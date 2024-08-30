@@ -110,7 +110,7 @@ include 'controllers/dashboardController.php';
                             break;
                         case 'tech_assigned':
                             echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                            echo 'A technician has been assigned.';
+                            echo 'A tech has been assigned.';
                             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                             echo '</div>';
                             break;
@@ -256,9 +256,6 @@ include 'controllers/dashboardController.php';
                                                 selected></option>
                                         </select>
                                     </div>
-                                </div>
-
-                                <div class="d-flex gap-2">
                                     <div class="form-group w-100">
                                         <label for="ticket_subject"
                                             class="py-2 text-muted">SUBJECT:<span
@@ -408,10 +405,9 @@ include 'controllers/dashboardController.php';
                                                 </option>
                                             </select>
                                         </div>
-                                    </div>
                                 <?php } ?>
 
-                                <div class="d-flex gap-2">
+
                                     <div class="form-group w-100">
                                         <label for="service_request" class="py-2 text-muted">SERVICE/S
                                             REQUEST:<span class="text-danger">*</span></label>
@@ -467,7 +463,7 @@ include 'controllers/dashboardController.php';
                                     </span>
                                 </div>
 
-                                <div class="d-flex flex-column gap-5">
+                                <div class="d-flex gap-2">
                                     <div class="form-group w-100">
                                         <label for="ticket_timeliness"
                                             class="py-2 text-muted">TIMELINESS<span
@@ -487,7 +483,7 @@ include 'controllers/dashboardController.php';
                                             placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
                                     </div>
                                     <div class="form-group w-100">
-                                        <label for="ticket_overall_rate" class="py-2 text-muted">OVERALL
+                                        <label for="ticket_overall_rate" class="py-2 text-muted">
                                             HOW WOULD YOU RATE THE QUALITY OF SERVICE?<span
                                                 class="text-danger">*</span> <br></label>
                                         <input type="number" class="form-control h-75 w-100"

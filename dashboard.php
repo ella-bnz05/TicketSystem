@@ -406,7 +406,7 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
         <div class="col-md-6 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
-      <h4 class="font-weight-bold card-title">Evaluation Table</h4>
+      <h4 class="font-weight-bold card-title">Performance Tracker</h4>
       <div class="table-responsive">
         <table class="table">
           <thead>
