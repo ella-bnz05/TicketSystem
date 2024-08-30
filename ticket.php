@@ -361,7 +361,7 @@ include 'controllers/dashboardController.php';
                         <form action="../../TS/backend/scripts/tickets/updateTickets-script.php"
                             method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                             <div class="d-flex flex-wrap">
-                                <div class="col-md-12 d-flex flex-column gap-5">
+                                <div class="col-md-12 d-flex flex-column gap-4">
                                     <div class="d-flex gap-2">
                                         <span class="fs-5 text-muted">
                                             Requestor's Details
@@ -459,68 +459,108 @@ include 'controllers/dashboardController.php';
                                             </div>
                                         </div>
 
-                                        <div class="d-flex gap-2 mt-5">
-                                            <span class="fs-5 text-muted">
-                                                Rating Details
-                                            </span>
-                                        </div>
+ <!--TICKET-->
+ <body>
+                <div class="d-flex gap-2 mt-5">
+                <span class="fs-5 text-muted">
+                                Rating Details
+                            </span>
+                        </div>
 
-                                        <div class="d-flex gap-2">
-                                            <div class="form-group w-100">
-                                                <label for="ticket_timeliness"
-                                                    class="py-2 text-muted">TIMELINESS<span
-                                                        class="text-danger">*</span> <br></label>
-                                                <input type="number" class="form-control h-75 w-100"
-                                                    id="ticket_timeliness" name="ticket_timeliness" required
-                                                    min="1" max="5"
-                                                    placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
-                                            </div>
-                                            <div class="form-group w-100">
-                                                <label for="ticket_effectiveness"
-                                                    class="py-2 text-muted">EFFECTIVENESS<span
-                                                        class="text-danger">*</span> <br></label>
-                                                <input type="number" class="form-control h-75 w-100"
-                                                    id="ticket_effectiveness" name="ticket_effectiveness"
-                                                    required min="1" max="5"
-                                                    placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
-                                            </div>
-                                            <div class="form-group w-100">
-                                                <label for="ticket_overall_rate" class="py-2 text-muted">
-                                                    HOW WOULD YOU RATE THE QUALITY OF SERVICE?<span
-                                                        class="text-danger">*</span> <br></label>
-                                                <input type="number" class="form-control h-75 w-100"
-                                                    id="ticket_overall_rate" name="ticket_overall_rate" required
-                                                    min="1" max="5"
-                                                    placeholder="PLEASE RATE THE SERVICE DONE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST.">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex gap-2">
-                                            <div class="form-group w-100">
-                                                <label for="ticket_feedback" class="py-2 text-muted">FEEDBACK &
-                                                    SUGGESTIONS:<span class="text-danger">*</span></label>
-                                                <textarea type="text" class="form-control h-100 w-100"
-                                                    id="ticket_feedback"
-                                                    placeholder="I am very impressed with the services provided by the City Information Technology and Records Management Unit (CITRMU). They are very efficient, reliable, and responsive to the IT needs of the city government. They handle troubleshooting, repair, maintenance, and evaluation of various IT equipment and systems. They also manage the CCTV footage and records of the city. They are always ready to assist and accommodate the inquiries and requests of their clients. They demonstrate a high level of professionalism, competence, and dedication in their work. Thank you, CITRMU, for your excellent IT support!"
-                                                    name="ticket_feedback"></textarea>
-                                            </div>
-                                        </div>
+                        <div class="d-flex gap-2">
+                            <div class="form-group w-100">
+                                <label for="ticket_timeliness" class="py-2 text-muted">
+                                    TIMELINESS<span class="text-danger">*</span><br>
+                                </label>
+                                <input type="number" class="form-control h-75 w-100"
+                                    id="ticket_timeliness" name="ticket_timeliness" required
+                                    min="1" max="5" step="1"
+                                    placeholder="PLEASE RATE THE SERVICE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST."
+                                    oninput="restrictInput(this)" onkeydown="return restrictKeys(event)">
+                            </div>
+                            <div class="form-group w-100">
+                                <label for="ticket_effectiveness" class="py-2 text-muted">
+                                    EFFECTIVENESS<span class="text-danger">*</span><br>
+                                </label>
+                                <input type="number" class="form-control h-75 w-100"
+                                    id="ticket_effectiveness" name="ticket_effectiveness" required
+                                    min="1" max="5" step="1"
+                                    placeholder="PLEASE RATE THE SERVICE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST."
+                                    oninput="restrictInput(this)" onkeydown="return restrictKeys(event)">
+                            </div>
+                            <div class="form-group w-100">
+                                <label for="ticket_overall_rate" class="py-2 text-muted">
+                                    HOW WOULD YOU RATE THE QUALITY OF SERVICE?<span class="text-danger">*</span><br>
+                                </label>
+                                <input type="number" class="form-control h-75 w-100"
+                                    id="ticket_overall_rate" name="ticket_overall_rate" required
+                                    min="1" max="5" step="1"
+                                    placeholder="PLEASE RATE THE SERVICE WITH 5 BEING THE HIGHEST & 1 BEING THE LOWEST."
+                                    oninput="restrictInput(this)" onkeydown="return restrictKeys(event)">
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <div class="form-group w-100">
+                                <label for="ticket_feedback" class="py-2 text-muted">
+                                    FEEDBACK & SUGGESTIONS:<span class="text-danger">*</span>
+                                </label>
+                                <textarea class="form-control h-100 w-100" id="ticket_feedback"
+                                        placeholder="I am very impressed with the services provided by the City Information Technology and Records Management Unit (CITRMU)..."
+                                        name="ticket_feedback"></textarea>
+                            </div>
+                        </div>
 
-                                        <div class="text-info py-3">WE APPRECIATE YOUR RATING, THANK YOU.</div>
-                                        <div class="d-flex gap-2">
-                                            <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
-                                                id="btn_rate_ticket" name="btn_rate_ticket">RATE TICKET</button>
-                                            <button type="button"
-                                                class="btn btn-secondary mt-3 py-3 px-5 w-auto"
-                                                data-bs-dismiss="modal">Close</button>
+                        <div class="text-info py-4">WE APPRECIATE YOUR RATING, THANK YOU.</div>
+
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
+                                    id="btn_rate_ticket" name="btn_rate_ticket">RATE TICKET</button>
+                            <button type="button" class="btn btn-secondary mt-3 py-3 px-5 w-auto"
+                                    data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                    <script>
+                        function restrictInput(input) {
+                            let value = parseInt(input.value, 10);
+                            if (isNaN(value)) {
+                                input.value = '';
+                            } else if (value < 1) {
+                                input.value = 1;
+                            } else if (value > 5) {
+                                input.value = 5;
+                            }
+                        }
+
+                        function restrictKeys(event) {
+                            // Allow backspace, delete, tab, escape, and enter keys
+                            if (event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' || event.key === 'Escape' || event.key === 'Enter') {
+                                return;
+                            }
+
+                            // Allow arrow keys
+                            if (event.key.startsWith('Arrow')) {
+                                return;
+                            }
+
+                            // Allow number keys (0-9)
+                            if (event.key >= '0' && event.key <= '9') {
+                                return;
+                            }
+
+                            // Prevent other keys
+                            event.preventDefault();
+                        }
+                    </script>
+                </body>
+                </div>
+                                            </div>
                                         </div>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
 
         <!-- Modal for Assigning Technician Form -->
         <div class="modal fade" id="assignTechnicianFormModal" tabindex="-1"
