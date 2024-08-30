@@ -15767,6 +15767,7 @@ input[type="button"].btn-block {
   min-height: 10px;
   padding: 1.25rem;
   border: green;
+  margin-left:10px;
   /*color: var(--bs-card-color);*/
 }
 
@@ -22600,6 +22601,44 @@ code {
 .img-ss {
   width: 26px;
   height: 26px;
+}
+/* Base button style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Button colors */
+.btn-red {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+
+.btn-blue {
+  background-color: #3498db; /* Blue */
+  color: white;
+}
+
+.btn-green {
+  background-color: #097235; /* Green */
+  color: white;
+}
+
+.btn-yellow {
+  background-color: #f1c40f; /* Yellow */
+  color: black;
+}
+
+.btn-gray {
+  background-color: #95a5a6; /* Gray */
+  color: white;
 }
 
 .stretch-card {
@@ -30723,6 +30762,38 @@ div.tagsinput span.tag a {
 }
 
 
+/* Make sure to include these styles in your CSS file or <style> block */
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.table-responsive {
+  position: relative;
+}
+
+.table-responsive .btn-secondary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.d-flex.justify-content-end {
+  margin-bottom: 1rem;
+}
+
+.text-muted.mb-0 {
+  margin-bottom: 0;
+}
 
 
 
