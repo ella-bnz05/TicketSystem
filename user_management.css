@@ -11109,14 +11109,14 @@ pre code {
 .jsgrid .jsgrid-table th,
 .table td,
 .jsgrid .jsgrid-table td {
-  padding: 0.9375rem;
+  padding: .5rem;
   vertical-align: top;
   border-top: 1px solid #2c2e33;
 }
 
 .table thead th,
 .jsgrid .jsgrid-table thead th {
-  vertical-align: bottom;
+  vertical-align: center;
   border-bottom: 2px solid #2c2e33;
   color: white;
 }
@@ -23989,7 +23989,7 @@ code {
 }
 
 .card .card-body {
-  padding: 1.75rem 1.5625rem;
+  padding: .5rem 1.5625rem;
 }
 
 .card .card-body+.card-body {

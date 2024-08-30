@@ -24,11 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt_technician_assigned_id = ConfigClass::prepareAndExecute($sql, [':is_assigned_to' => $is_assigned_to]);
     $technician_assigned_id = $stmt_technician_assigned_id->fetchColumn();
 
-    if ($_SESSION['user_role'] === 'MANAGER') {
+    if ($_SESSION['user_role'] === 'MANAGER' ) {
         $is_done = 0;
     } elseif ($_SESSION['user_role'] === 'REQUESTOR') {
         $is_done = 1;
     } 
+    
     
     // Update the database record
     $sql = "UPDATE tbl_tickets SET

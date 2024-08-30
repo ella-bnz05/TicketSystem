@@ -104,7 +104,7 @@ class TicketsControllerClass
             $html .= '<div class="dropdown-menu">';
 
             if ($_SESSION['user_role'] === 'TECHNICIAN') {
-                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myRateModal"' . $row['id'] . '">MyRATE</a>';
+                $html .= '<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#myRateModal"' . $row['id'] . '">My RATE</a>';
             }
 
             $html .= '</td>';
@@ -234,7 +234,8 @@ class TicketsControllerClass
     
             if ($_SESSION['user_role'] === 'ADMIN') {
                 $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ratingFormModal"' . $row['id'] . '">RATE</a>';
-                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editFormModal"' . $row['id'] . '">EDIT</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#assignTechnicianFormModal"' . $row['id'] . '">ASSIGN A TECHNICIAN</a>';
+           
             }
     
             if ($_SESSION['user_role'] === 'REQUESTOR') {
@@ -242,7 +243,9 @@ class TicketsControllerClass
             }
     
             if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER') {
-                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#assignTechnicianFormModal"' . $row['id'] . '">ASSIGN A TECHNICIAN</a>';
+                $html .= '<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editFormModal"' . $row['id'] . '">EDIT</a>';
+                $html .= '<a class="dropdown-item" href="../../TS/backend/scripts/tickets/deleteTickets-script.php?id=' . htmlspecialchars($row['id']) . '&alert=ticket_deleted" data-bs-toggle="modal"' . $row['id'] . '">CANCEL TICKET</a>';
+              
             }
     
             $html .= '</div>'; // Close dropdown-menu div

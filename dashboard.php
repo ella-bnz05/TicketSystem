@@ -163,15 +163,15 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
 
         <!-- Top Section: Main Tickets Table -->
         <div class="col-md-12 grid-margin stretch-card">
-  <div class="card">
-    <div class="card-body">
-      <div class="d-flex flex-row justify-content-between align-items-center">
-        <h4 class="font-weight-bold card-title mb-1">TICKETS</h4>
-        <a data-bs-toggle="modal" data-bs-target="#addNewUserModal" class="btn btn-secondary gap-2 align-items-center">
-          <span class="icon-plus-outline"></span>+
-        </a>
-      </div>
-      <div class="d-flex justify-content-end mb-2">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <h4 class="font-weight-bold card-title mb-1">TICKETS</h4>
+                <a data-bs-toggle="modal" data-bs-target="#addNewUserModal" class="btn btn-secondary gap-2 align-items-center">
+                  <span class="icon-plus-outline"></span>+
+                </a>
+              </div>
+              <div class="d-flex justify-content-end mb-2">
               </div>
               <div class="row">
                 <div class="col-12">
@@ -257,7 +257,7 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
                             <td> PC issue</td>
                             <td> 19 Aug 2024 </td>
                             <td>
-                            <div class="btn btn-yellow">Pending</div>
+                              <div class="btn btn-yellow">Pending</div>
                             </td>
                           </tr>
                           <tr>
@@ -321,82 +321,82 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
               <div class="d-flex d-md-block rounded mt-3">
                 <h2 class="card-title">
 
-                <h4 class="font-weight-bold card-title mb-1">SERVICES</h4>
-                <p class="text-muted mb-1">Your data status</p>
-                <div class="col-12">
-                  <div class="preview-list">
-                    <!-- Preview Items -->
-                    <div class="preview-item border-bottom">
-                      <div class="preview-thumbnail">
-                        <div class="preview-icon bg-primary">
-                          <i class="mdi mdi-file-document"></i>
+                  <h4 class="font-weight-bold card-title mb-1">SERVICES</h4>
+                  <p class="text-muted mb-1">Your data status</p>
+                  <div class="col-12">
+                    <div class="preview-list">
+                      <!-- Preview Items -->
+                      <div class="preview-item border-bottom">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-primary">
+                            <i class="mdi mdi-file-document"></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content d-sm-flex flex-grow">
+                          <div class="flex-grow">
+                            <h6 class="preview-subject">Admin dashboard design</h6>
+                            <p class="text-muted mb-0">Broadcast web app mockup</p>
+                          </div>
+                          <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                            <p class="text-muted">15 minutes ago</p>
+                            <p class="text-muted mb-0">30 tasks, 5 issues</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="preview-item-content d-sm-flex flex-grow">
-                        <div class="flex-grow">
-                          <h6 class="preview-subject">Admin dashboard design</h6>
-                          <p class="text-muted mb-0">Broadcast web app mockup</p>
+                      <div class="preview-item border-bottom">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-success">
+                            <i class="mdi mdi-cloud-download"></i>
+                          </div>
                         </div>
-                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                          <p class="text-muted">15 minutes ago</p>
-                          <p class="text-muted mb-0">30 tasks, 5 issues</p>
+                        <div class="preview-item-content d-sm-flex flex-grow">
+                          <div class="flex-grow">
+                            <h6 class="preview-subject">Wordpress Development</h6>
+                            <p class="text-muted mb-0">Upload new design</p>
+                          </div>
+                          <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                            <p class="text-muted">1 hour ago</p>
+                            <p class="text-muted mb-0">23 tasks, 5 issues</p>
+                          </div>
                         </div>
                       </div>
+                      <div class="preview-item border-bottom">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-info">
+                            <i class="mdi mdi-clock"></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content d-sm-flex flex-grow">
+                          <div class="flex-grow">
+                            <h6 class="preview-subject">Project meeting</h6>
+                            <p class="text-muted mb-0">New project discussion</p>
+                          </div>
+                          <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                            <p class="text-muted">35 minutes ago</p>
+                            <p class="text-muted mb-0">15 tasks, 2 issues</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="preview-item">
+                        <div class="preview-thumbnail">
+                          <div class="preview-icon bg-warning">
+                            <i class="mdi mdi-chart-pie"></i>
+                          </div>
+                        </div>
+                        <div class="preview-item-content d-sm-flex flex-grow">
+                          <div class="flex-grow">
+                            <h6 class="preview-subject">UI Design</h6>
+                            <p class="text-muted mb-0">New application planning</p>
+                          </div>
+                          <div class="mr-auto text-sm-right pt-2 pt-sm-0">
+                            <p class="text-muted">50 minutes ago</p>
+                            <p class="text-muted mb-0">27 tasks, 4 issues</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Repeat preview items as needed -->
                     </div>
-                    <div class="preview-item border-bottom">
-                      <div class="preview-thumbnail">
-                        <div class="preview-icon bg-success">
-                          <i class="mdi mdi-cloud-download"></i>
-                        </div>
-                      </div>
-                      <div class="preview-item-content d-sm-flex flex-grow">
-                        <div class="flex-grow">
-                          <h6 class="preview-subject">Wordpress Development</h6>
-                          <p class="text-muted mb-0">Upload new design</p>
-                        </div>
-                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                          <p class="text-muted">1 hour ago</p>
-                          <p class="text-muted mb-0">23 tasks, 5 issues</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="preview-item border-bottom">
-                      <div class="preview-thumbnail">
-                        <div class="preview-icon bg-info">
-                          <i class="mdi mdi-clock"></i>
-                        </div>
-                      </div>
-                      <div class="preview-item-content d-sm-flex flex-grow">
-                        <div class="flex-grow">
-                          <h6 class="preview-subject">Project meeting</h6>
-                          <p class="text-muted mb-0">New project discussion</p>
-                        </div>
-                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                          <p class="text-muted">35 minutes ago</p>
-                          <p class="text-muted mb-0">15 tasks, 2 issues</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="preview-item">
-                      <div class="preview-thumbnail">
-                        <div class="preview-icon bg-warning">
-                          <i class="mdi mdi-chart-pie"></i>
-                        </div>
-                      </div>
-                      <div class="preview-item-content d-sm-flex flex-grow">
-                        <div class="flex-grow">
-                          <h6 class="preview-subject">UI Design</h6>
-                          <p class="text-muted mb-0">New application planning</p>
-                        </div>
-                        <div class="mr-auto text-sm-right pt-2 pt-sm-0">
-                          <p class="text-muted">50 minutes ago</p>
-                          <p class="text-muted mb-0">27 tasks, 4 issues</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Repeat preview items as needed -->
                   </div>
-                </div>
               </div>
             </div>
           </div>
@@ -404,62 +404,62 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
 
         <!-- Middle Section: Evaluation Table -->
         <div class="col-md-6 grid-margin stretch-card">
-  <div class="card">
-    <div class="card-body">
-      <h4 class="font-weight-bold card-title">Performance Tracker</h4>
-      <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Task</th>
-              <th>Employee Name</th>
-              <th>Evaluator</th>
-              <th class="text-right">Average Percent</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Task 1</td>
-              <td>Ella Bañez</td>
-              <td>Jane Smith</td>
-              <td class="text-right">10%</td>
-            </tr>
-            <tr>
-              <td>Task 2</td>
-              <td>Archie Saragena</td>
-              <td>Mark Brown</td>
-              <td class="text-right">25%</td>
-            </tr>
-            <tr>
-              <td>Task 3</td>
-              <td>Ryan Robles</td>
-              <td>Cris Davis</td>
-              <td class="text-right">15%</td>
-            </tr>
-            <tr>
-              <td>Task 4</td>
-              <td>Aalihya Rivero</td>
-              <td>David Moore</td>
-              <td class="text-right">30%</td>
-            </tr>
-            <tr>
-              <td>Task 5</td>
-              <td>Aharah Jane Faustino</td>
-              <td>Laura Harris</td>
-              <td class="text-right">20%</td>
-            </tr>
-            <tr>
-              <td>Task 6</td>
-              <td>Rinoa Jayne Catanaoan</td>
-              <td>James Martinez</td>
-              <td class="text-right">35%</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="font-weight-bold card-title">Performance Tracker</h4>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Task</th>
+                      <th>Employee Name</th>
+                      <th>Evaluator</th>
+                      <th class="text-right">Average Percent</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Task 1</td>
+                      <td>Ella Bañez</td>
+                      <td>Jane Smith</td>
+                      <td class="text-right">10%</td>
+                    </tr>
+                    <tr>
+                      <td>Task 2</td>
+                      <td>Archie Saragena</td>
+                      <td>Mark Brown</td>
+                      <td class="text-right">25%</td>
+                    </tr>
+                    <tr>
+                      <td>Task 3</td>
+                      <td>Ryan Robles</td>
+                      <td>Cris Davis</td>
+                      <td class="text-right">15%</td>
+                    </tr>
+                    <tr>
+                      <td>Task 4</td>
+                      <td>Aalihya Rivero</td>
+                      <td>David Moore</td>
+                      <td class="text-right">30%</td>
+                    </tr>
+                    <tr>
+                      <td>Task 5</td>
+                      <td>Aharah Jane Faustino</td>
+                      <td>Laura Harris</td>
+                      <td class="text-right">20%</td>
+                    </tr>
+                    <tr>
+                      <td>Task 6</td>
+                      <td>Rinoa Jayne Catanaoan</td>
+                      <td>James Martinez</td>
+                      <td class="text-right">35%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
         <!-- Bottom Section: Tickets per Department -->
