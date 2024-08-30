@@ -29,21 +29,24 @@
         <span class="nav-link">Navigation</span>
       </li>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="dashboard.php">
+        <a class="nav-link" href="dashboard.php"  <?php echo (strpos($_SERVER['REQUEST_URI'], 'dashboard') !== false) ? 'class="current-page"' : ''; ?>>
           <span class="menu-icon">
             <i class="mdi mdi-speedometer"></i>
           </span>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
+      <?php if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER' || $_SESSION['user_role'] === 'REQUESTOR') { ?>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="ticket.php">
+        <a class="nav-link" href="ticket.php"<?php echo (strpos($_SERVER['REQUEST_URI'], 'tickets') !== false) ? 'class="current-page"' : ''; ?> >
           <span class="menu-icon">
             <i class="mdi mdi-laptop"></i>
           </span>
           <span class="menu-title">Ticket management</span>
         </a>
       </li>
+      <?php } ?>
+      <?php if ($_SESSION['user_role'] === 'ADMIN') { ?>
       <li class="nav-item menu-items">
         <a class="nav-link" href="services.php">
           <span class="menu-icon">
@@ -52,6 +55,8 @@
           <span class="menu-title">Services</span>
         </a>
       </li>
+      <?php } ?>
+      <?php if ($_SESSION['user_role'] === 'ADMIN') { ?>
       <li class="nav-item menu-items">
         <a class="nav-link" href="testing.php">
           <span class="menu-icon">
@@ -60,14 +65,17 @@
           <span class="menu-title">Performance Tracker</span>
         </a>
       </li>
+      <?php } ?>
       </li>
+      <?php if ($_SESSION['user_role'] === 'ADMIN') { ?>
       <li class="nav-item menu-items">
-        <a class="nav-link" href="user_management.php">
+        <a class="nav-link" href="user_management.php" <?php echo (strpos($_SERVER['REQUEST_URI'], 'user_management') !== false) ? 'class="current-page"' : ''; ?>>
           <span class="menu-icon">
             <i class="mdi mdi-security"></i>
           </span>
           <span class="menu-title">Users Management</span>
         </a>
       </li>
+      <?php } ?>
     </ul>
   </nav>

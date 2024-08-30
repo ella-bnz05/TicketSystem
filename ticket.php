@@ -108,6 +108,12 @@ include 'controllers/dashboardController.php';
                             echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                             echo '</div>';
                             break;
+                        case 'tech_assigned':
+                            echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
+                            echo 'A technician has been assigned.';
+                            echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+                            echo '</div>';
+                            break;
                         default:
                             echo '<div class="bg-secondary text-white alert alert-danger alert-dismissible fade show" role="alert">';
                             echo 'Unknown Alert Type.';
@@ -530,7 +536,7 @@ include 'controllers/dashboardController.php';
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="../../TS/backend/scripts/tickets/updateTickets-script.php"
+                    <form action="../../TS/backend/scripts/tickets/assignTech-script.php"
                         method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
