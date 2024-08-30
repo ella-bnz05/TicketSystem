@@ -35,6 +35,8 @@ include 'C:\xampp\htdocs\TS\controllers/dashboardController.php';
   <!-- Layout styles -->
   <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+
   <!-- End layout styles -->
 </head>
 

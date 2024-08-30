@@ -126,7 +126,7 @@
           <a class="dropdown-item preview-item" href="user-profile.php">
             <div class="preview-thumbnail">
               <div class="preview-icon bg-dark rounded-circle">
-                <i class="mdi mdi-settings text-success"></i>
+                <i class="mdi mdi-cog text-success"></i>
               </div>
             </div>
             <div class="preview-item-content">
