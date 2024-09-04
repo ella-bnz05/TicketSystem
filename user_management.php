@@ -1,9 +1,9 @@
 <?php
 session_start();
-//if (!isset($_SESSION['user_id'])) {
-//header('Location: ../../../frontend/auth/index.php');
-// exit();
-//}
+if (!isset($_SESSION['user_id'])) {
+header('Location: ../../TS/login/login.php');
+ exit();
+}
 
 include 'db/config.php';
 include 'controllers/UsersController.php';

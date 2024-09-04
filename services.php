@@ -1,9 +1,9 @@
 <?php
 session_start();
-//if (!isset($_SESSION['user_id'])) {
-//header('Location: ../../../frontend/auth/index.php');
-// exit();
-//}
+if (!isset($_SESSION['user_id'])) {
+header('Location: ../../../frontend/auth/index.php');
+ exit();
+}
 
 include 'db/config.php';
 include 'controllers/UsersController.php';
@@ -163,7 +163,7 @@ include 'controllers/serviceController.php';
                                 <div class="d-flex gap-2">
                                     <div class="form-group w-100">
                                         <label for="service_creator_username"
-                                            class="py-2 text-muted">REQUESTOR
+                                            class="py-2 text-muted">CREATOR
                                             USERNAME:<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control h-75 w-100"
                                             id="service_creator_username"
@@ -173,7 +173,7 @@ include 'controllers/serviceController.php';
                                     </div>
                                     <div class="form-group w-100">
                                         <label for="service_creator_unique_id"
-                                            class="py-2 text-muted">REQUESTOR
+                                            class="py-2 text-muted">CREATOR
                                             ID:<span class="text-danger">*</span></label>
                                         <input type="text" class="form-control h-75 w-100"
                                             id="service_creator_unique_id"
@@ -184,7 +184,7 @@ include 'controllers/serviceController.php';
                                     <div class="form-group w-100">
                                         <label for="service_creator_department" class="py-2 text-muted">OFFICE
                                             /
-                                            DEPARTMENT (REQUESTOR):<span
+                                            DEPARTMENT (CREATOR):<span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control h-75 w-100"
                                             id="service_creator_department"

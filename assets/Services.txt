@@ -1,0 +1,49 @@
+Services
+
+TECH SUPPORT (VIRTUAL PROJECTS & PROGRAM)
+
+
+AUXILLARY SYSTEM (PABX DOOR ACCESS)
+
+
+INSTALLATION OF VARIOUS SOFTWARE
+
+
+COMPUTER & NETWORK SUPPORT
+
+IT EQUIPMENT REPAIR & MAINTENANCE
+
+
+===================
+
+Account:
+
+Aiah Arceta
+Colet Vergara
+
+pw: admin
+
+Username:
+Tech1
+Tech2
+PW: tech
+
+Manager1
+Manager2
+
+manager
+
+
+City Building Official’s Office
+Requestor1
+pw: requestor
+
+
+City Engineering Office
+CEO
+requestor
+
+CDRRMO
+requestor
+
+

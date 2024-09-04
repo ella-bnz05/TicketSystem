@@ -25,7 +25,7 @@ class UsersControllerClass
 
             $html .= '<tr class="text-center">';
             $html .= '<td class="py-3 text-muted">
-            <img class="avatar h-auto" style="width: 5rem;" src="user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
+            <img class="avatar h-auto" style="width: 5rem;" src="backend/user-images/' . $row['unique_id'] . '/' . $row['img_user_profile_picture'] . '"</td>';
             $html .= '<td class="py-3 text-muted">' . $row['unique_id'] . '</td>';
             $html .= '<td class="py-3 text-primary">' . $row['username'] . '</td>';
             $html .= '<td class="py-3 text-' . $textColor . '">' . $row['role'] . '</td>';
@@ -111,6 +111,22 @@ replay
             $html .= '<a href="/TS/backend/scripts/user/deleteUsers-script.php?id=' . htmlspecialchars($row['id']) . '&alert=member_deleted" class="btn hover-effect d-flex align-items-center gap-2 text-danger"><span class="material-symbols-outlined h-auto">delete</span>DELETE</a>';
             $html .= '</td>';
             $html .= '</tr>';
+        }
+
+        return $html;
+    }
+
+    public static function getRequestor(): string
+    {
+        $sql = "SELECT * FROM tbl_users WHERE is_deleted = 0 and role = 'REQUESTOR'";
+        $stmt = ConfigClass::prepareAndExecute($sql, []);
+        $result = $stmt->fetchAll();
+
+        $html = '';
+
+        foreach ($result as $row) {
+           // $html .= '<option value="' . $row['username'] . '">' . $row['username'] . ' </option>';
+            $html .= '<option value="' . htmlspecialchars($row['username']) . '" data-unique-id="' . htmlspecialchars($row['unique_id']) . '" data-department="' . htmlspecialchars($row['department']) . '">' . htmlspecialchars($row['username']) . '</option>';
         }
 
         return $html;
