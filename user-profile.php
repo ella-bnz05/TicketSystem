@@ -147,7 +147,7 @@ include 'controllers/ticketsController.php';
                 </div>
                 <div class="card-body" style="height: 100%; width: 100%;">
                     <form
-                        action="../../../backend/scripts/user/changeUsername-script.php?id=<?php echo $_SESSION['user_id']; ?>"
+                        action="../../TS/backend/scripts/user/changeUsername-script.php?id=<?php echo $_SESSION['user_id']; ?>"
                         method="post" style="width: 75%;" class="bg-light p-5 rounded mb-5">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
@@ -169,7 +169,7 @@ include 'controllers/ticketsController.php';
                     </form>
 
                     <form
-                        action="../../../backend/scripts/user/changePassword-script.php?id=<?php echo $_SESSION['user_id']; ?>"
+                        action="../../TS/backend/scripts/user/changePassword-script.php?id=<?php echo $_SESSION['user_id']; ?>"
                         method="post" style="width: 75%;" class="bg-light p-5 rounded mb-5">
                         <div class="d-flex flex-wrap">
                             <div class="col-md-12 d-flex flex-column gap-5">
