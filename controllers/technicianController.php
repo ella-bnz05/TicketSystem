@@ -92,7 +92,7 @@ class TechnicianControllerClass
     public static function getAvailableTechnicians(): string
     {
         $sql = "SELECT unique_id, username FROM tbl_users u WHERE u.role = 'TECHNICIAN'
-         AND NOT EXISTS (SELECT 1 FROM tbl_tickets t WHERE t.is_assigned_to = u.username AND t.is_done = 1)";
+         AND NOT EXISTS (SELECT 1 FROM tbl_tickets t WHERE t.is_assigned_to = u.username AND t.is_done = 0)";
 
         $stmt = ConfigClass::prepareAndExecute($sql, []);
         $result = $stmt->fetchAll();

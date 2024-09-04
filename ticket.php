@@ -651,260 +651,269 @@ include 'controllers/dashboardController.php';
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- Modal for Assigning Technician Form -->
-<div class="modal fade" id="assignTechnicianFormModal" tabindex="-1"
-    aria-labelledby="l" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="assignTechnicianFormModalLabel">Assign a Technical
-                    Personnel</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="../../TS/backend/scripts/tickets/assignTech-script.php"
-                    method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
-                    <div class="d-flex flex-wrap">
-                        <div class="col-md-12 d-flex flex-column gap-5">
-                            <div class="d-flex gap-2">
-                                <span class="fs-5 text-muted">
-                                    Requestor's Details
-                                </span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <div class="form-group w-100">
-                                    <label for="requestor_username"
-                                        class="py-2 text-muted">REQUESTOR USERNAME:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_username" name="requestor_username"
-                                        value="<?php echo $requestor_username; ?>" readonly>
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="requestor_unique_id"
-                                        class="py-2 text-muted">REQUESTOR ID:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_unique_id" name="requestor_unique_id"
-                                        value="<?php echo $requestor_unique_id; ?>" readonly>
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="requestor_department" class="py-2 text-muted">OFFICE
-                                        / DEPARTMENT (REQUESTOR):<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_department" name="requestor_department"
-                                        value="<?php echo $requestor_department; ?>" readonly>
-                                </div>
-                            </div>
-                            <?php if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER') { ?>
-                                <div class="d-flex gap-2">
-                                    <div class="form-group w-100">
-                                        <label for="is_assigned_to"
-                                            class="py-2 text-muted">TECHNICIAN:<span
-                                                class="text-danger">*</span></label>
-                                        <select class="form-control h-75 w-100" name="is_assigned_to"
-                                            id="is_assigned_to" required>
-                                            <option selected>
-                                                <?php echo TechnicianControllerClass::getAvailableTechnicians(); ?>
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                            <?php } ?>
-                            <div class="d-flex gap-2">
-                                <div class="form-group w-100">
-                                    <label for="service_request" class="py-2 text-muted">SERVICE/S
-                                        REQUEST:<span class="text-danger">*</span></label>
-                                    <select class="form-control h-75 w-100"
-                                        aria-label="Default select example" name="service_request"
-                                        id="service_request" required>
-                                        <option value="<?php echo $service_request; ?>" selected>
-                                            <?php echo $service_request; ?>
-                                        </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="d-flex gap-2 mt-5">
-                                <span class="fs-5 text-muted">
-                                    Ticket's Details
-                                </span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <div class="form-group w-100">
-                                    <label for="unique_id" class="py-2 text-muted">TICKET ID:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="unique_id" placeholder="<?php echo $unique_id; ?>"
-                                        name="unique_id" value="<?php echo $unique_id; ?>" readonly>
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="ticket_subject"
-                                        class="py-2 text-muted">SUBJECT:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="ticket_subject" value="<?php echo $ticket_subject; ?>"
-                                        name="ticket_subject" readonly>
-                                </div>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <div class="form-group w-80">
-                                    <label for="ticket_description"
-                                        class="py-2 text-muted">DESCRIPTION:<span
-                                            class="text-danger">*</span></label>
-                                    <textarea type="text" class="form-control h-100 w-100"
-                                        id="ticket_description"
-                                        placeholder="The network connectivity issues started at approximately 10:00 AM today. I have tried restarting my modem and router, but this has not resolved the problem. I have also tried connecting to different networks, but I am still unable to connect. I am able to connect to other devices on my local network, but I am unable to access the internet."
-                                        name="ticket_description"
-                                        readonly><?php echo $ticket_description; ?></textarea>
-                                </div>
-                            </div>
-                            <div class="text-info py-3">SELECT A TECHNICIAN TO ASSIGN</div>
-                            <div class="d-flex gap-2">
-                                <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
-                                    id="btn_assign_technician" name="btn_assign_technician">ASSIGN
-                                    TECHNICIAN</button>
-                                <button type="button"
-                                    class="btn btn-secondary mt-3 py-3 px-5 w-auto"
-                                    data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
+
+        <!-- Modal for Assigning Technician Form -->
+        <div class="modal fade" id="assignFormModal" tabindex="-1" aria-labelledby="assignFormModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="assignFormModalLabel">Edit Ticket</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                </form>
+                    <div class="modal-body">
+                        <form action="../../TS/backend/scripts/tickets/assignTech-script.php"
+                            method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
+                            <div class="d-flex flex-wrap">
+                                <div class="col-md-12 d-flex flex-column gap-5">
+                                    <div class="d-flex gap-2">
+                                        <span class="fs-5 text-muted">
+                                            Requestor's Details
+                                        </span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <div class="form-group w-100">
+                                            <label for="requestor_username"
+                                                class="py-2 text-muted">REQUESTOR USERNAME:<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_username" name="requestor_username"
+                                                value="<?php echo $requestor_username; ?>" readonly>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="requestor_unique_id"
+                                                class="py-2 text-muted">REQUESTOR ID:<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_unique_id" name="requestor_unique_id"
+                                                value="<?php echo $requestor_unique_id; ?>" readonly>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="requestor_department" class="py-2 text-muted">OFFICE
+                                                / DEPARTMENT (REQUESTOR):<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_department" name="requestor_department"
+                                                value="<?php echo $requestor_department; ?>" readonly>
+                                        </div>
+                                    </div>
+
+                                    <?php if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER' || $_SESSION['user_role'] === 'REQUESTOR') { ?>
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="is_assigned_to"
+                                                    class="py-2 text-muted">TECHNICIAN:<span
+                                                        class="text-danger">*</span></label>
+                                                <select class="form-control h-75 w-100" name="is_assigned_to"
+                                                    id="is_assigned_to" required>
+                                                    <option value=" " selected></option>
+                                                    <option
+                                                        value="<?php echo TechnicianControllerClass::getAvailableTechnicians(); ?>">
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        <?php } ?>
+
+
+                                        <div class="form-group w-100">
+                                            <label for="service_request" class="py-2 text-muted">SERVICE/S
+                                                REQUEST:<span class="text-danger">*</span></label>
+                                            <select class="form-control h-75 w-100"
+                                                aria-label="Default select example" name="service_request"
+                                                id="service_request" required>
+                                                <option value="<?php echo $service_request; ?>" selected>
+                                                    <?php echo $service_request; ?>
+                                                </option>
+                                            </select>
+                                        </div>
+                                        </div>
+
+                                        <div class="d-flex gap-2 mt-5">
+                                            <span class="fs-5 text-muted">
+                                                Ticket's Details
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="unique_id" class="py-2 text-muted">TICKET ID:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control h-75 w-100"
+                                                    id="unique_id" placeholder="<?php echo $unique_id; ?>"
+                                                    name="unique_id" value="<?php echo $unique_id; ?>" readonly>
+                                            </div>
+                                            <div class="form-group w-100">
+                                                <label for="ticket_subject"
+                                                    class="py-2 text-muted">SUBJECT:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control h-75 w-100"
+                                                    id="ticket_subject" value="<?php echo $ticket_subject; ?>"
+                                                    name="ticket_subject" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="ticket_description"
+                                                    class="py-2 text-muted">DESCRIPTION:<span
+                                                        class="text-danger">*</span></label>
+                                                <textarea type="text" class="form-control h-100 w-100"
+                                                    id="ticket_description"
+                                                    placeholder="The network connectivity issues started at approximately 10:00 AM today. I have tried restarting my modem and router, but this has not resolved the problem. I have also tried connecting to different networks, but I am still unable to connect. I am able to connect to other devices on my local network, but I am unable to access the internet."
+                                                    name="ticket_description"
+                                                    readonly><?php echo $ticket_description; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-info py-3"> THANK YOU.</div>
+                                        <div class="d-flex gap-2">
+                                            <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
+                                                id="btn_cancel_ticket" name="btn_rate_ticket">CANCEL TICKET</button>
+                                            <button type="button"
+                                                class="btn btn-secondary mt-3 py-3 px-5 w-auto"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="modal fade" id="cancelFormModal" tabindex="-1" aria-labelledby="ratingFormModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="ratingFormModalLabel">Edit Ticket</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="../../TS/backend/scripts/tickets/updateTickets-script.php"
-                    method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
-                    <div class="d-flex flex-wrap">
-                        <div class="col-md-12 d-flex flex-column gap-5">
-                            <div class="d-flex gap-2">
-                                <span class="fs-5 text-muted">
-                                    Requestor's Details
-                                </span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <div class="form-group w-100">
-                                    <label for="requestor_username"
-                                        class="py-2 text-muted">REQUESTOR USERNAME:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_username" name="requestor_username"
-                                        value="<?php echo $requestor_username; ?>" readonly>
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="requestor_unique_id"
-                                        class="py-2 text-muted">REQUESTOR ID:<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_unique_id" name="requestor_unique_id"
-                                        value="<?php echo $requestor_unique_id; ?>" readonly>
-                                </div>
-                                <div class="form-group w-100">
-                                    <label for="requestor_department" class="py-2 text-muted">OFFICE
-                                        / DEPARTMENT (REQUESTOR):<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control h-75 w-100"
-                                        id="requestor_department" name="requestor_department"
-                                        value="<?php echo $requestor_department; ?>" readonly>
-                                </div>
-                            </div>
-
-                            <?php if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER' || $_SESSION['user_role'] === 'REQUESTOR') { ?>
-                                <div class="d-flex gap-2">
-                                    <div class="form-group w-100">
-                                        <label for="is_assigned_to"
-                                            class="py-2 text-muted">TECHNICIAN:<span
-                                                class="text-danger">*</span></label>
-                                        <select class="form-control h-75 w-100" name="is_assigned_to"
-                                            id="is_assigned_to" required>
-                                            <option value=" <?php echo $is_assigned_to; ?>" selected>
-                                                <?php echo $is_assigned_to; ?>
-                                            </option>
-                                        </select>
-                                    </div>
-                                <?php } ?>
 
 
-                                <div class="form-group w-100">
-                                    <label for="service_request" class="py-2 text-muted">SERVICE/S
-                                        REQUEST:<span class="text-danger">*</span></label>
-                                    <select class="form-control h-75 w-100"
-                                        aria-label="Default select example" name="service_request"
-                                        id="service_request" required>
-                                        <option value="<?php echo $service_request; ?>" selected>
-                                            <?php echo $service_request; ?>
-                                        </option>
-                                    </select>
-                                </div>
-                                </div>
-
-                                <div class="d-flex gap-2 mt-5">
-                                    <span class="fs-5 text-muted">
-                                        Ticket's Details
-                                    </span>
-                                </div>
-
-                                <div class="d-flex gap-2">
-                                    <div class="form-group w-100">
-                                        <label for="unique_id" class="py-2 text-muted">TICKET ID:<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control h-75 w-100"
-                                            id="unique_id" placeholder="<?php echo $unique_id; ?>"
-                                            name="unique_id" value="<?php echo $unique_id; ?>" readonly>
-                                    </div>
-                                    <div class="form-group w-100">
-                                        <label for="ticket_subject"
-                                            class="py-2 text-muted">SUBJECT:<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" class="form-control h-75 w-100"
-                                            id="ticket_subject" value="<?php echo $ticket_subject; ?>"
-                                            name="ticket_subject" readonly>
-                                    </div>
-                                </div>
-                                <div class="d-flex gap-2">
-                                    <div class="form-group w-100">
-                                        <label for="ticket_description"
-                                            class="py-2 text-muted">DESCRIPTION:<span
-                                                class="text-danger">*</span></label>
-                                        <textarea type="text" class="form-control h-100 w-100"
-                                            id="ticket_description"
-                                            placeholder="The network connectivity issues started at approximately 10:00 AM today. I have tried restarting my modem and router, but this has not resolved the problem. I have also tried connecting to different networks, but I am still unable to connect. I am able to connect to other devices on my local network, but I am unable to access the internet."
-                                            name="ticket_description"
-                                            readonly><?php echo $ticket_description; ?></textarea>
-                                    </div>
-                                </div>
-                                <div class="text-info py-3">WE APPRECIATE YOUR RATING, THANK YOU.</div>
-                                <div class="d-flex gap-2">
-                                    <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
-                                        id="btn_cancel_ticket" name="btn_rate_ticket">CANCEL TICKET</button>
-                                    <button type="button"
-                                        class="btn btn-secondary mt-3 py-3 px-5 w-auto"
-                                        data-bs-dismiss="modal">Close</button>
-                                </div>
-                        </div>
+        <!-- Modal for Edit Form -->
+        <div class="modal fade" id="editFormModal" tabindex="-1" aria-labelledby="editFormModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="editFormModalLabel">Edit Ticket</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                </form>
+                    <div class="modal-body">
+                        <form action="../../TS/backend/scripts/tickets/assignTech-script.php"
+                            method="post" enctype="multipart/form-data" class="p-3" style="width: 100%;">
+                            <div class="d-flex flex-wrap">
+                                <div class="col-md-12 d-flex flex-column gap-5">
+                                    <div class="d-flex gap-2">
+                                        <span class="fs-5 text-muted">
+                                            Requestor's Details
+                                        </span>
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <div class="form-group w-100">
+                                            <label for="requestor_username"
+                                                class="py-2 text-muted">REQUESTOR USERNAME:<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_username" name="requestor_username"
+                                                value="<?php echo $requestor_username; ?>" readonly>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="requestor_unique_id"
+                                                class="py-2 text-muted">REQUESTOR ID:<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_unique_id" name="requestor_unique_id"
+                                                value="<?php echo $requestor_unique_id; ?>" readonly>
+                                        </div>
+                                        <div class="form-group w-100">
+                                            <label for="requestor_department" class="py-2 text-muted">OFFICE
+                                                / DEPARTMENT (REQUESTOR):<span
+                                                    class="text-danger">*</span></label>
+                                            <input type="text" class="form-control h-75 w-100"
+                                                id="requestor_department" name="requestor_department"
+                                                value="<?php echo $requestor_department; ?>" readonly>
+                                        </div>
+                                    </div>
+
+                                    <?php if ($_SESSION['user_role'] === 'ADMIN' || $_SESSION['user_role'] === 'MANAGER' || $_SESSION['user_role'] === 'REQUESTOR') { ?>
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="is_assigned_to"
+                                                    class="py-2 text-muted">TECHNICIAN:<span
+                                                        class="text-danger">*</span></label>
+                                                <select class="form-control h-75 w-100" name="is_assigned_to"
+                                                    id="is_assigned_to" required>
+                                                    <option value=" " selected></option>
+                                                    <option
+                                                        value="<?php echo TechnicianControllerClass::getAvailableTechnicians(); ?>">
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        <?php } ?>
+
+
+                                        <div class="form-group w-100">
+                                            <label for="service_request" class="py-2 text-muted">SERVICE/S
+                                                REQUEST:<span class="text-danger">*</span></label>
+                                            <select class="form-control h-75 w-100"
+                                                aria-label="Default select example" name="service_request"
+                                                id="service_request" required>
+                                                <option value="<?php echo $service_request; ?>" selected>
+                                                    <?php echo $service_request; ?>
+                                                </option>
+                                            </select>
+                                        </div>
+                                        </div>
+
+                                        <div class="d-flex gap-2 mt-5">
+                                            <span class="fs-5 text-muted">
+                                                Ticket's Details
+                                            </span>
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="unique_id" class="py-2 text-muted">TICKET ID:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control h-75 w-100"
+                                                    id="unique_id" placeholder="<?php echo $unique_id; ?>"
+                                                    name="unique_id" value="<?php echo $unique_id; ?>" readonly>
+                                            </div>
+                                            <div class="form-group w-100">
+                                                <label for="ticket_subject"
+                                                    class="py-2 text-muted">SUBJECT:<span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control h-75 w-100"
+                                                    id="ticket_subject" value="<?php echo $ticket_subject; ?>"
+                                                    name="ticket_subject" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex gap-2">
+                                            <div class="form-group w-100">
+                                                <label for="ticket_description"
+                                                    class="py-2 text-muted">DESCRIPTION:<span
+                                                        class="text-danger">*</span></label>
+                                                <textarea type="text" class="form-control h-100 w-100"
+                                                    id="ticket_description"
+                                                    placeholder="The network connectivity issues started at approximately 10:00 AM today. I have tried restarting my modem and router, but this has not resolved the problem. I have also tried connecting to different networks, but I am still unable to connect. I am able to connect to other devices on my local network, but I am unable to access the internet."
+                                                    name="ticket_description"
+                                                    readonly><?php echo $ticket_description; ?></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-info py-3"> THANK YOU.</div>
+                                        <div class="d-flex gap-2">
+                                            <button type="submit" class="btn btn-primary mt-3 py-3 px-5 w-auto"
+                                                id="btn_cancel_ticket" name="btn_rate_ticket">Assign Tech</button>
+                                            <button type="button"
+                                                class="btn btn-secondary mt-3 py-3 px-5 w-auto"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
+
+
 
 
 
