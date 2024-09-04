@@ -4,7 +4,7 @@ class TicketsControllerClass
 {
     public static function getServices(): string
     {
-        $sql = "SELECT * FROM tbl_services";
+        $sql = "SELECT * FROM tbl_services WHERE is_deleted=0";
         $stmt = ConfigClass::prepareAndExecute($sql, []);
         $result = $stmt->fetchAll();
 

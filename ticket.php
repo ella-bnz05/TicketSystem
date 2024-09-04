@@ -216,8 +216,8 @@ include 'controllers/dashboardController.php';
                                                 <label for="requestor_username"
                                                     class="py-2 text-muted">REQUESTOR
                                                     USERNAME:<span class="text-danger">*</span></label>
-                                                <select class="form-control h-75 w-100" name="is_assigned_to"
-                                                    id="is_assigned_to" required>
+                                                <select class="form-control h-75 w-100" name="requestor_username"
+                                                    id="requestor_username" required>
                                                     <option value=" " selected></option>
                                                     <option
                                                         value="<?php echo UsersControllerClass::getRequestor(); ?>">
@@ -325,7 +325,7 @@ include 'controllers/dashboardController.php';
                                             <label for="service_request" class="py-2 text-muted">SERVICE/S
                                                 REQUEST:<span class="text-danger">*</span></label>
                                             <select class="form-control h-75 w-100"
-                                                aria-label="Default select example" name="service_request"
+                                                aria-label="Default select example" name="service_request" placeholder="Service Request"
                                                 id="service_request" required>
                                                 <option
                                                     value="<?php echo TicketsControllerClass::getServices(); ?>"
@@ -371,7 +371,7 @@ include 'controllers/dashboardController.php';
         </div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                var selectElement = document.getElementById('is_assigned_to');
+                var selectElement = document.getElementById('requestor_username');
                 var uniqueIdField = document.getElementById('requestor_unique_id');
                 var departmentField = document.getElementById('requestor_department');
 
