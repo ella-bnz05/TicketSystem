@@ -3,6 +3,9 @@ session_start();
 include 'C:\xampp\htdocs\TS\db\config.php';
 include 'C:\xampp\htdocs\TS\controllers\ticketsController.php';
 
+$id = $_GET['id'] ?? $_POST['id'];
+
+
 // Check if form data is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve and sanitize form data

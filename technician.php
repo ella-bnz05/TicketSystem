@@ -89,7 +89,10 @@ include 'controllers/dashboardController.php';
                                 settings_backup_restore
                             </span></span>Completed Tickets</a>
                     </div>
+
+            
                     <?php
+
                     // Check if the `alert` key is defined in the `$_GET` variable.
                     if (isset($_GET['alert'])) {
                         // Get the value of the `alert` parameter.
@@ -97,33 +100,21 @@ include 'controllers/dashboardController.php';
 
                         // Display an alert message based on the value of the `alert` parameter.
                         switch ($alertType) {
-                            case 'new_ticket':
+                            case 'new_technician':
                                 echo '<div class="bg-primary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                                echo 'A new ticket has been added.';
+                                echo 'A new technician has been added.';
                                 echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                                 echo '</div>';
                                 break;
-                            case 'ticket_deleted':
-                                echo '<div class="bg-primary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                                echo 'A ticket has been deleted.';
+                            case 'techinician_deleted':
+                                echo '<div class="bg-secondary text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
+                                echo 'A technician has been deleted.';
                                 echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                                 echo '</div>';
                                 break;
-                            case 'ticket_restored':
+                            case 'techinician_restored':
                                 echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                                echo 'A ticket has been restored.';
-                                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-                                echo '</div>';
-                                break;
-                            case 'ticket_completed':
-                                echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                                echo 'A ticket has been completed.';
-                                echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
-                                echo '</div>';
-                                break;
-                            case 'tech_assigned':
-                                echo '<div class="bg-info text-white border-0 alert alert-success alert-dismissible fade show" role="alert">';
-                                echo 'A tech has been assigned.';
+                                echo 'A technician has been restored.';
                                 echo '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
                                 echo '</div>';
                                 break;
@@ -141,7 +132,7 @@ include 'controllers/dashboardController.php';
                         <table class="table table-striped table-hover">
                             <thead>
                                 <tr class="text-center">
-                                    <th scope="col">Ticket ID</th>
+                                    <th scope="col">Technian ID</th>
                                     <th scope="col">Requested By</th>
                                     <th scope="col">Department</th>
                                     <th scope="col">Assigned To</th>
@@ -149,11 +140,11 @@ include 'controllers/dashboardController.php';
                                     <th scope="col">Ticket Subject</th>
                                     <th scope="col">Ticket Description</th>
                                     <th scope="col">Ticket Issued On</th>
-                                    <th scope="col">Actions</th>
+                                    <!--th scope="col">Actions</th-->
                                 </tr>
                             </thead>
                             <tbody class="py-5">
-                                <?php echo TicketsControllerClass::getTicketsTicketsIndex(); ?>
+                            <?php echo TicketsControllerClass::getTicketsDashboardIndex(); ?>
                             </tbody>
                         </table>
                     </div>
